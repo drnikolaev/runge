@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:runge="http://www.cvmlib.com/runge" targetNamespace="http://www.cvmlib.com/runge" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xs:element name="config">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="solvers">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="solver" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="dll" type="xs:string"/>
+										<xs:element name="routine" type="xs:string"/>
+										<xs:element name="size2" type="xs:unsignedByte"/>
+										<xs:element name="size1" type="xs:unsignedByte"/>
+										<xs:element name="size0" type="xs:unsignedByte"/>
+										<xs:element name="name" type="xs:string"/>
+									</xs:sequence>
+									<xs:attribute name="type" type="runge:SolverType" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="SolverType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="FTX_F"/>
+			<xs:enumeration value="AFI_FAFI"/>
+			<xs:enumeration value="FTX_FFJ"/>
+			<xs:enumeration value="BUTX_BFU"/>
+			<xs:enumeration value="FX_FFJ"/>
+			<xs:enumeration value="FTX_FFJFT"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

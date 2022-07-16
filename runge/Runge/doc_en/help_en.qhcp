@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QHelpCollectionProject version="1.0">
+	<assistant>
+		<title>Runge Help</title>
+        <applicationIcon>images/icon.png</applicationIcon>
+<!--		<cacheDirectory base="collection">help</cacheDirectory> -->
+		<cacheDirectory>Runge</cacheDirectory>
+		<startPage>qthelp://com.cvmlib.runge/doc/index_en.html</startPage>
+		<aboutMenuText>
+			<text>About Runge</text>
+		</aboutMenuText>
+        <aboutDialog>
+            <file>about.txt</file>
+            <icon>images/icon32.png</icon>
+        </aboutDialog>
+		<enableDocumentationManager>false</enableDocumentationManager>
+		<enableAddressBar visible="true">true</enableAddressBar>
+		<enableFilterFunctionality>false</enableFilterFunctionality>
+	</assistant>
+	<docFiles>
+		<generate>
+			<file>
+				<input>help_en.qhp</input>
+				<output>help_en.qch</output>
+			</file>
+		</generate>
+		<register>
+			<file>help_en.qch</file>
+		</register>
+	</docFiles>
+</QHelpCollectionProject>

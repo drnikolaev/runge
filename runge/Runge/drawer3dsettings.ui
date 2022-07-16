@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Drawer3DSettings</class>
+ <widget class="QDialog" name="Drawer3DSettings">
+  <property name="windowModality">
+   <enum>Qt::WindowModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>523</width>
+    <height>375</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>523</width>
+    <height>375</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>523</width>
+    <height>375</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>3D Drawer Settings</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="runge.qrc">
+    <normaloff>:/Runge/Resources/16x16/wrench.png</normaloff>:/Runge/Resources/16x16/wrench.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <widget class="QGroupBox" name="groupBoxAxes">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>391</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Show axes</string>
+   </property>
+   <property name="title">
+    <string>&amp;Axes</string>
+   </property>
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <widget class="QPushButton" name="pushButtonAdjustLengths">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>150</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Reset all axes lengths to fit current graph</string>
+    </property>
+    <property name="text">
+     <string>Ad&amp;just</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonXAxisColor">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>30</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Set X axis color</string>
+    </property>
+    <property name="text">
+     <string>&amp;Color...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditXFrom">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>30</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>X axis goes from this point</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditXTo">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>30</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>X axis goes to this point</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;X from/to</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>lineEditXFrom</cstring>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>70</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Y from/to</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>lineEditYFrom</cstring>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditYFrom">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Y axis goes from this point</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditYTo">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>70</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Y axis goes to this point</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonYAxisColor">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>70</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Set Y axis color</string>
+    </property>
+    <property name="text">
+     <string>&amp;Color...</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>110</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Z from/to</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>lineEditZFrom</cstring>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditZFrom">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>110</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Z axis goes from this point</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditZTo">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>110</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Z axis goes to this point</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonZAxisColor">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>110</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Set Z axis color</string>
+    </property>
+    <property name="text">
+     <string>&amp;Color...</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>417</x>
+     <y>16</y>
+     <width>91</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Help|QDialogButtonBox::Ok</set>
+   </property>
+   <property name="centerButtons">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxHandles">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>391</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>&amp;Handles</string>
+   </property>
+   <widget class="QLineEdit" name="lineEditHandleDiameter">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>30</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Solution handles diameter on screen and images (in pixels)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>91</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Diameter</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>lineEditHandleDiameter</cstring>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBoxLineWidths">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>210</y>
+     <width>391</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Assign width to lines (in pixels)</string>
+   </property>
+   <property name="title">
+    <string>Line &amp;Widths</string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <widget class="QLineEdit" name="lineEditAxesWidth">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>30</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Axes width on screen and images (in pixels)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ax&amp;es</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>lineEditAxesWidth</cstring>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>30</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sol&amp;utions</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>lineEditSolutionsWidth</cstring>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEditSolutionsWidth">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>30</y>
+      <width>71</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Solutions width on screen and images (in pixels)</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>groupBoxAxes</tabstop>
+  <tabstop>lineEditXFrom</tabstop>
+  <tabstop>lineEditXTo</tabstop>
+  <tabstop>pushButtonXAxisColor</tabstop>
+  <tabstop>lineEditYFrom</tabstop>
+  <tabstop>lineEditYTo</tabstop>
+  <tabstop>pushButtonYAxisColor</tabstop>
+  <tabstop>lineEditZFrom</tabstop>
+  <tabstop>lineEditZTo</tabstop>
+  <tabstop>pushButtonZAxisColor</tabstop>
+  <tabstop>pushButtonAdjustLengths</tabstop>
+  <tabstop>lineEditAxesWidth</tabstop>
+  <tabstop>lineEditSolutionsWidth</tabstop>
+  <tabstop>lineEditHandleDiameter</tabstop>
+  <tabstop>buttonBox</tabstop>
+ </tabstops>
+ <resources>
+  <include location="runge.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Drawer3DSettings</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>471</x>
+     <y>50</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>535</x>
+     <y>118</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Drawer3DSettings</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>437</x>
+     <y>68</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>485</x>
+     <y>153</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

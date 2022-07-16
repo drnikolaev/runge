@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Programming and Solving</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,2,sections+,fonts+,imgdir:images/ --> 
+<meta name="src" content="index_en.tex"> 
+<meta name="date" content="2013-11-14 12:32:00"> 
+<link rel="stylesheet" type="text/css" href="index_en.css"> 
+</head><body 
+>
+   <!--l. 297--><div class="crosslinks"><p class="noindent"><span 
+class="ecrm-1200">[</span><a 
+href="index_ense5.html" ><span 
+class="ecrm-1200">next</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense3.html" ><span 
+class="ecrm-1200">prev</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense3.html#tailindex_ense3.html" ><span 
+class="ecrm-1200">prev-tail</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="#tailindex_ense4.html"><span 
+class="ecrm-1200">tail</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_en.html#index_ense4.html" ><span 
+class="ecrm-1200">up</span></a><span 
+class="ecrm-1200">] </span></p></div>
+   <h3 class="sectionHead"><span class="titlemark"><span 
+class="ecrm-1200">4   </span></span> <a 
+href="index_en.html#QQ2-5-13" id="x5-130004"><span 
+class="ecrm-1200">Programming and Solving</span></a></h3>
+<!--l. 299--><p class="noindent" ><span 
+class="ecrm-1200">Before solving your system of ordinary differential equations you need to program</span>
+<span 
+class="ecrm-1200">it in Runge. This section describes the way you can do that.</span>
+<!--l. 302--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">4.1   </span></span> <a 
+href="index_en.html#QQ2-5-14" id="x5-140004.1"><span 
+class="ecrm-1200">System</span></a></h4>
+<!--l. 305--><p class="noindent" >
+      <dl class="enumerate"><dt class="enumerate">
+   <span 
+class="ecrm-1200">1.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Choose type of your system:</span>
+      <!--l. 308--><p class="noindent" ><img 
+src="images/systemType.png" alt="System Type"  
+>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">2.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Choose dimension:</span>
+      <!--l. 312--><p class="noindent" ><img 
+src="images/dimension.png" alt="Dimension"  
+>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">3.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Choose independent variable. It should be valid identifier (i.e. a string</span>
+      <span 
+class="ecrm-1200">beginning with letter):</span>
+      <!--l. 316--><p class="noindent" ><img 
+src="images/indepVar.png" alt="Independent Variable"  
+>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">4.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Enter the system you&#8217;d like to solve. First column is for dependent</span>
+      <span 
+class="ecrm-1200">variables (valid identifiers, i.e. strings beginning with letter), second</span>
+      <span 
+class="ecrm-1200">one is for equations. Equations should be valid </span><a 
+href="index_ense1.html#expressions"><span 
+class="ecrm-1200">expressions</span></a> <span 
+class="ecrm-1200">containing</span>
+      <span 
+class="ecrm-1200">arithmetic operators and elementary functions. You can also use macros</span>
+      <span 
+class="ecrm-1200">(like macro &#8220;p&#8221; shown below) for repeating expressions:</span>
+      <!--l. 324--><p class="noindent" ><img 
+src="images/systemKrug.png" alt="System"  
+>
+      <!--l. 326--><p class="noindent" ><span 
+class="ecrm-1200">The following system is entered at this picture:</span>
+                                                                          
+
+                                                                          
+      <center class="math-display" >
+      <img 
+src="images/index_en27x.png" alt="{
+  &#x02D9;x = y +  xp
+  &#x02D9;y = - x + yp
+      " class="math-display" ></center>
+      <!--l. 334--><p class="nopar" >
+      </dd></dl>
+<!--l. 340--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">4.2   </span></span> <a 
+href="index_en.html#QQ2-5-15" id="x5-150004.2"><span 
+class="ecrm-1200">Parameters</span></a></h4>
+<!--l. 343--><p class="noindent" >
+      <dl class="enumerate"><dt class="enumerate">
+   <span 
+class="ecrm-1200">1.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Choose solver. Not every solver works for a given system type:</span>
+      <!--l. 347--><p class="noindent" ><img 
+src="images/solver.png" alt="Solver"  
+>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">2.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Set start parameters, values and macros:</span>
+      <!--l. 351--><p class="noindent" ><img 
+src="images/parametersWindow.png" alt="Parameters"  
+>
+      <!--l. 353--><p class="noindent" ><span 
+class="ecrm-1200">Here you can set:</span>
+      <!--l. 356--><p class="noindent" >
+           <ul>
+           <li class="compactitem"><span 
+class="ecbx-1200">Start t </span><span 
+class="ecrm-1200">That&#8217;s the initial value of the independent variable.</span>
+           </li>
+           <li class="compactitem"><span 
+class="ecbx-1200">End t </span><span 
+class="ecrm-1200">That&#8217;s the end value of the independent variable &#8212; last</span>
+           <span 
+class="ecrm-1200">solution will be computed at this point.</span>
+           </li>
+           <li class="compactitem"><span 
+class="ecbx-1200">H </span><span 
+class="ecrm-1200">Initial step. Real step will be computed according to precision</span>
+           <span 
+class="ecrm-1200">required.</span>
+           </li>
+           <li class="compactitem"><span 
+class="ecbx-1200">Hmin </span><span 
+class="ecrm-1200">Minimum step allowed. If precision can&#8217;t be reached even</span>
+           <span 
+class="ecrm-1200">for this step, solver fails.</span>
+                                                                          
+
+                                                                          
+           </li>
+           <li class="compactitem"><span 
+class="ecbx-1200">Hmax </span><span 
+class="ecrm-1200">Maximum step allowed.</span>
+           </li>
+           <li class="compactitem"><span 
+class="ecbx-1200">Eps </span><span 
+class="ecrm-1200">Absolute precision required on each step.</span>
+           </li>
+           <li class="compactitem"><span 
+class="ecbx-1200">P  </span><span 
+class="ecrm-1200">Relative  precision  measure.  If  some  component&#8217;s  absolute</span>
+           <span 
+class="ecrm-1200">value becomes greater than P, it gets normalized when precision</span>
+           <span 
+class="ecrm-1200">compared to Eps.</span>
+           </li>
+           <li class="compactitem"><span 
+class="ecbx-1200">Macros </span><span 
+class="ecrm-1200">List with macros. Here we have</span>
+           <center class="math-display" >
+           <img 
+src="images/index_en28x.png" alt="p = 2 - x2 - y2
+           " class="math-display" ></center>
+           <!--l. 367--><p class="nopar" > <span 
+class="ecrm-1200">therefore the final system turns to be</span>
+           <center class="math-display" >
+           <img 
+src="images/index_en29x.png" alt="{                 2    2
+  x&#x02D9;= y +  x(2 - x -  y )
+  &#x02D9;y = - x + y(2 - x2 - y2)
+           " class="math-display" ></center>
+           <!--l. 376--><p class="nopar" >
+           </li>
+           <li class="compactitem"><span 
+class="ecbx-1200">Dep.  var.  -  Start  Value  </span><span 
+class="ecrm-1200">Initial  values  for  each  dependent</span>
+           <span 
+class="ecrm-1200">variable. In this particular case we have:</span>
+           <center class="math-display" >
+           <img 
+src="images/index_en30x.png" alt="x(t0)=  2, y(t0)=  2,
+           " class="math-display" ></center>
+           <!--l. 381--><p class="nopar" > <span 
+class="ecrm-1200">where</span> <img 
+src="images/index_en31x.png" alt="t0 = 0 "  class="math" ><span 
+class="ecrm-1200">, see Start t above.</span></li></ul>
+      </dd></dl>
+<!--l. 389--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">4.3   </span></span> <a 
+href="index_en.html#QQ2-5-16" id="x5-160004.3"><span 
+class="ecrm-1200">Solution</span></a></h4>
+                                                                          
+
+                                                                          
+<!--l. 392--><p class="noindent" >
+      <dl class="enumerate"><dt class="enumerate">
+   <span 
+class="ecrm-1200">1.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Click Start button </span><img 
+src="images/startButton.png" alt="Start Button"  
+> <span 
+class="ecrm-1200">to start solving the system. For big</span>
+      <span 
+class="ecrm-1200">systems or long time ranges you might see progress bar</span>
+      <!--l. 396--><p class="noindent" ><img 
+src="images/progressBar.png" alt="Progress Bar"  
+>
+      <!--l. 398--><p class="noindent" ><span 
+class="ecrm-1200">Here  you  can  stop,  pause  and  resume  solving  process  by  using</span>
+      <span 
+class="ecrm-1200">appropriate buttons.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">2.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Explore solution</span>
+      <!--l. 402--><p class="noindent" ><img 
+src="images/krugSolution.png" alt=""  
+>
+      <!--l. 404--><p class="noindent" ><span 
+class="ecrm-1200">Every solution has an id starting from zero.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">3.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Explore solution graphically (here you can select different variables for</span>
+      <span 
+class="ecrm-1200">X and Y axes):</span>
+      <!--l. 409--><p class="noindent" ><img 
+src="images/krugTX.png" alt=""  
+> <img 
+src="images/krugXY.png" alt=""  
+>
+      </dd></dl>
+<!--l. 414--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">4.4   </span></span> <a 
+href="index_en.html#QQ2-5-17" id="x5-170004.4"><span 
+class="ecrm-1200">Export</span></a></h4>
+<!--l. 416--><p class="noindent" ><span 
+class="ecrm-1200">Use Export feature to export solution to other programs like MS Excel or</span>
+<span 
+class="ecrm-1200">MATLAB</span>
+<!--l. 418--><p class="indent" >   <img 
+src="images/exportRemove.png" alt=""  
+>
+<!--l. 420--><p class="indent" >   <span 
+class="ecrm-1200">Excel should read it like this:</span>
+<!--l. 422--><p class="indent" >   <img 
+src="images/toExcel.png" alt=""  
+>
+<!--l. 424--><p class="indent" >   <span 
+class="ecrm-1200">MATLAB should read it like this:</span>
+<!--l. 426--><p class="indent" >   <img 
+src="images/toMATLAB.png" alt=""  
+>
+<!--l. 428--><p class="indent" >   <span 
+class="ecrm-1200">And after issuing a command like</span>
+<!--l. 430--><p class="indent" >   <span 
+class="ectt-1200">&#x003E;&#x003E; plot(solution0(:,2), solution0(:,3));</span>
+<!--l. 432--><p class="indent" >   <span 
+class="ecrm-1200">it should render a plot:</span>
+<!--l. 434--><p class="indent" >   <img 
+src="images/plotMATLAB.png" alt=""  
+>
+                                                                          
+
+                                                                          
+   <!--l. 444--><div class="crosslinks"><p class="noindent"><span 
+class="ecrm-1200">[</span><a 
+href="index_ense5.html" ><span 
+class="ecrm-1200">next</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense3.html" ><span 
+class="ecrm-1200">prev</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense3.html#tailindex_ense3.html" ><span 
+class="ecrm-1200">prev-tail</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense4.html" ><span 
+class="ecrm-1200">front</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_en.html#index_ense4.html" ><span 
+class="ecrm-1200">up</span></a><span 
+class="ecrm-1200">] </span></p></div>
+<!--l. 444--><p class="indent" >   <a 
+ id="tailindex_ense4.html"></a>   
+</body></html> 

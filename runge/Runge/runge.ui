@@ -1,0 +1,1333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RungeClass</class>
+ <widget class="QMainWindow" name="RungeClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>742</width>
+    <height>538</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>742</width>
+    <height>538</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Runge</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="runge.qrc">
+    <normaloff>:/Runge/Resources/32x32/graph_edge_directed.png</normaloff>:/Runge/Resources/32x32/graph_edge_directed.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="statusTip">
+   <string/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout">
+    <item>
+     <layout class="QVBoxLayout" name="leftLayout">
+      <item>
+       <layout class="QVBoxLayout" name="leftVerticalLayout" stretch="0,0">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="sizeConstraint">
+         <enum>QLayout::SetNoConstraint</enum>
+        </property>
+        <item>
+         <widget class="QToolBox" name="toolBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>350</width>
+            <height>348</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>100000</width>
+            <height>348</height>
+           </size>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="page_system">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>355</width>
+             <height>240</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>System</string>
+           </attribute>
+           <widget class="QSpinBox" name="spinBoxDimension">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>160</y>
+              <width>61</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>999</number>
+            </property>
+            <property name="value">
+             <number>1</number>
+            </property>
+           </widget>
+           <widget class="QGroupBox" name="groupODEType">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>-10</y>
+              <width>341</width>
+              <height>151</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string/>
+            </property>
+            <widget class="QRadioButton" name="radioFTX">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>30</y>
+               <width>231</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>x' = F(&amp;t, x)</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="radioFX">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>60</y>
+               <width>221</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string/>
+             </property>
+             <property name="statusTip">
+              <string/>
+             </property>
+             <property name="text">
+              <string>x' = F(&amp;x)</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="radioAF">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>90</y>
+               <width>221</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>x' = &amp;A(t)x + f(x)</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="radioBF">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>120</y>
+               <width>221</width>
+               <height>19</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <weight>75</weight>
+               <italic>false</italic>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>x' = &amp;Bx + f(t, x)</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QLabel" name="labelDimension">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>160</y>
+              <width>191</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&amp;Dimension</string>
+            </property>
+            <property name="buddy">
+             <cstring>spinBoxDimension</cstring>
+            </property>
+           </widget>
+           <widget class="QLabel" name="labelIndepVar">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>190</y>
+              <width>191</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&amp;Independent variable</string>
+            </property>
+            <property name="buddy">
+             <cstring>editIndepVar</cstring>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="editIndepVar">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>190</y>
+              <width>61</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>t</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_method">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>355</width>
+             <height>240</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Solver</string>
+           </attribute>
+           <widget class="QListWidget" name="listSolvers">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>331</width>
+              <height>201</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Solvers available for selected System Type</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_parameters">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>355</width>
+             <height>240</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Parameters</string>
+           </attribute>
+           <widget class="QLabel" name="labelEndT">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>40</y>
+              <width>51</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>En&amp;d</string>
+            </property>
+            <property name="buddy">
+             <cstring>editEndT</cstring>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="editEndT">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>40</y>
+              <width>61</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>End value for the Independent Variable</string>
+            </property>
+            <property name="text">
+             <string>1.</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="editStartT">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>10</y>
+              <width>61</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Start value for the Independent Variable</string>
+            </property>
+            <property name="text">
+             <string>0.</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="labelStartT">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>10</y>
+              <width>51</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&amp;Start</string>
+            </property>
+            <property name="buddy">
+             <cstring>editStartT</cstring>
+            </property>
+           </widget>
+           <widget class="QTableWidget" name="tableMacros">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>50</y>
+              <width>211</width>
+              <height>165</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Macros and their values</string>
+            </property>
+            <property name="columnCount">
+             <number>2</number>
+            </property>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>110</number>
+            </attribute>
+            <column/>
+            <column/>
+           </widget>
+           <widget class="QLabel" name="labelMacros">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>20</y>
+              <width>121</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&amp;Macros</string>
+            </property>
+            <property name="buddy">
+             <cstring>tableMacros</cstring>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="addMacro">
+            <property name="geometry">
+             <rect>
+              <x>290</x>
+              <y>20</y>
+              <width>21</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Add new macro to the table</string>
+            </property>
+            <property name="text">
+             <string>+</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="removeMacro">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>20</y>
+              <width>21</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Remove selected macro</string>
+            </property>
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="labelStep">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>70</y>
+              <width>51</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&amp;H</string>
+            </property>
+            <property name="buddy">
+             <cstring>editStep</cstring>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="editStep">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>70</y>
+              <width>61</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Initial step</string>
+            </property>
+            <property name="text">
+             <string>0.01</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="editStepMin">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>100</y>
+              <width>61</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Minimum step allowed</string>
+            </property>
+            <property name="text">
+             <string>1.e-5</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="labelStepMin">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>100</y>
+              <width>51</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>H&amp;min</string>
+            </property>
+            <property name="buddy">
+             <cstring>editStepMin</cstring>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="editStepMax">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>130</y>
+              <width>61</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Maximum step allowed</string>
+            </property>
+            <property name="text">
+             <string>0.1</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="labelStepMax">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>130</y>
+              <width>51</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Hma&amp;x</string>
+            </property>
+            <property name="buddy">
+             <cstring>editStepMax</cstring>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="editEps">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>160</y>
+              <width>61</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Maximum residual per step allowed</string>
+            </property>
+            <property name="text">
+             <string>1.e-10</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="labelEps">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>160</y>
+              <width>51</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&amp;Eps</string>
+            </property>
+            <property name="buddy">
+             <cstring>editEps</cstring>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="editP">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>190</y>
+              <width>61</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="toolTip">
+             <string>Relative residual measure threshold</string>
+            </property>
+            <property name="text">
+             <string>10.</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="labelP">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>190</y>
+              <width>51</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>&amp;P</string>
+            </property>
+            <property name="buddy">
+             <cstring>editP</cstring>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="page_solutions">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>355</width>
+             <height>240</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>Solutions</string>
+           </attribute>
+           <widget class="QCheckBox" name="checkBoxShowAllPoints">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>11</y>
+              <width>151</width>
+              <height>24</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Show all computed points even if there are millions of them (might take a while)</string>
+            </property>
+            <property name="text">
+             <string>Show &amp;All Points</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButtonRemoveSolution">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>10</y>
+              <width>81</width>
+              <height>26</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Remove selected solution</string>
+            </property>
+            <property name="text">
+             <string>&amp;Delete</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButtonExportSolution">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>170</x>
+              <y>10</y>
+              <width>81</width>
+              <height>26</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="toolTip">
+             <string>Export selected solution to a file</string>
+            </property>
+            <property name="text">
+             <string>E&amp;xport</string>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tableSolutions">
+          <property name="minimumSize">
+           <size>
+            <width>355</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="toolTip">
+           <string>Computed solutions</string>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="columnCount">
+           <number>7</number>
+          </property>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="rightLayout">
+      <item>
+       <widget class="QTableWidget" name="tableFtx">
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string>F(t,x) equation</string>
+        </property>
+        <property name="rowCount">
+         <number>1</number>
+        </property>
+        <property name="columnCount">
+         <number>2</number>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>120</number>
+        </attribute>
+        <row/>
+        <column/>
+        <column/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableFi">
+        <property name="toolTip">
+         <string>f(x) member</string>
+        </property>
+        <property name="rowCount">
+         <number>1</number>
+        </property>
+        <property name="columnCount">
+         <number>2</number>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>120</number>
+        </attribute>
+        <row/>
+        <column/>
+        <column/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableA">
+        <property name="toolTip">
+         <string>Matrix A(t)</string>
+        </property>
+        <property name="rowCount">
+         <number>1</number>
+        </property>
+        <property name="columnCount">
+         <number>1</number>
+        </property>
+        <row/>
+        <column/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableFx">
+        <property name="toolTip">
+         <string>F(x) equation</string>
+        </property>
+        <property name="rowCount">
+         <number>1</number>
+        </property>
+        <property name="columnCount">
+         <number>2</number>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>120</number>
+        </attribute>
+        <row/>
+        <column/>
+        <column/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableB">
+        <property name="toolTip">
+         <string>Matrix B</string>
+        </property>
+        <property name="rowCount">
+         <number>1</number>
+        </property>
+        <property name="columnCount">
+         <number>1</number>
+        </property>
+        <row/>
+        <column/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableStartValues">
+        <property name="toolTip">
+         <string>Start Values</string>
+        </property>
+        <property name="rowCount">
+         <number>1</number>
+        </property>
+        <property name="columnCount">
+         <number>2</number>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>120</number>
+        </attribute>
+        <row/>
+        <column/>
+        <column/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableUtx">
+        <property name="toolTip">
+         <string>f(t,x) member</string>
+        </property>
+        <property name="rowCount">
+         <number>1</number>
+        </property>
+        <property name="columnCount">
+         <number>2</number>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>120</number>
+        </attribute>
+        <row/>
+        <column/>
+        <column/>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="tableSolutionPoints">
+        <property name="toolTip">
+         <string>Current solution</string>
+        </property>
+        <property name="columnCount">
+         <number>0</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>742</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <widget class="QMenu" name="menuOpen_Recent">
+     <property name="title">
+      <string>Open &amp;Recent</string>
+     </property>
+     <addaction name="actionMRU1"/>
+     <addaction name="actionMRU2"/>
+     <addaction name="actionMRU3"/>
+     <addaction name="actionMRU4"/>
+     <addaction name="separator"/>
+     <addaction name="actionClearAllMRUs"/>
+    </widget>
+    <addaction name="action_New"/>
+    <addaction name="action_Open"/>
+    <addaction name="menuOpen_Recent"/>
+    <addaction name="action_Save"/>
+    <addaction name="actionSave_As"/>
+    <addaction name="separator"/>
+    <addaction name="actionE_xit"/>
+   </widget>
+   <widget class="QMenu" name="menu_Run">
+    <property name="title">
+     <string>&amp;Run</string>
+    </property>
+    <addaction name="action_Start"/>
+    <addaction name="action_Pause"/>
+    <addaction name="actionResume"/>
+    <addaction name="actionS_top"/>
+   </widget>
+   <widget class="QMenu" name="menu_Options">
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+    <widget class="QMenu" name="menuLanguage">
+     <property name="tearOffEnabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>&amp;Language</string>
+     </property>
+     <property name="icon">
+      <iconset resource="runge.qrc">
+       <normaloff>:/Runge/Resources/16x16/world_16.png</normaloff>:/Runge/Resources/16x16/world_16.png</iconset>
+     </property>
+     <addaction name="action_English"/>
+     <addaction name="action_Russian"/>
+    </widget>
+    <addaction name="actionConfiguration"/>
+    <addaction name="action_Font"/>
+    <addaction name="menuLanguage"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="action_2D_Draw"/>
+    <addaction name="action_3D_Draw"/>
+   </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="action_Contents"/>
+    <addaction name="action_About_Runge"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menu_Options"/>
+   <addaction name="menu_Run"/>
+   <addaction name="menuView"/>
+   <addaction name="menu_Help"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>Main Toolbar</string>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftToolBarArea|Qt::RightToolBarArea|Qt::TopToolBarArea</set>
+   </property>
+   <property name="floatable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_New">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/filenew.png</normaloff>:/Runge/Resources/filenew.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New</string>
+   </property>
+   <property name="statusTip">
+    <string>Create new system</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Open">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/folder.png</normaloff>:/Runge/Resources/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open</string>
+   </property>
+   <property name="statusTip">
+    <string>Open previously saved system</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Close">
+   <property name="text">
+    <string>&amp;Close</string>
+   </property>
+  </action>
+  <action name="actionOpen_Recent">
+   <property name="text">
+    <string>Open &amp;Recent...</string>
+   </property>
+  </action>
+  <action name="action_Start">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/media_play_green.png</normaloff>:/Runge/Resources/media_play_green.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Start</string>
+   </property>
+   <property name="statusTip">
+    <string>Start solving current system using current values</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Pause">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/media_pause.png</normaloff>:/Runge/Resources/media_pause.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Pause</string>
+   </property>
+   <property name="statusTip">
+    <string>Pause solving process</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionS_top">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/media_stop_red.png</normaloff>:/Runge/Resources/media_stop_red.png</iconset>
+   </property>
+   <property name="text">
+    <string>S&amp;top</string>
+   </property>
+   <property name="statusTip">
+    <string>Stop solving process</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionE_xit">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/exit.png</normaloff>:/Runge/Resources/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+   <property name="statusTip">
+    <string>Exit Runge</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/disk_blue.png</normaloff>:/Runge/Resources/disk_blue.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="statusTip">
+    <string>Save current system and all solutions to a file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/save_as.png</normaloff>:/Runge/Resources/save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save &amp;As...</string>
+   </property>
+   <property name="statusTip">
+    <string>Save current system and all solutions to another file</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Font">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/font.png</normaloff>:/Runge/Resources/font.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Font</string>
+   </property>
+   <property name="statusTip">
+    <string>Choose font for entering system equations</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionResume">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/media_step_forward.png</normaloff>:/Runge/Resources/media_step_forward.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Resume</string>
+   </property>
+   <property name="statusTip">
+    <string>Resume solving process</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionConfiguration">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/16x16/wrench.png</normaloff>:/Runge/Resources/16x16/wrench.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Configuration</string>
+   </property>
+   <property name="statusTip">
+    <string>Choose configuration file (configures custom solvers)</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_2D_Draw">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/document_view.png</normaloff>:/Runge/Resources/document_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;2D Draw</string>
+   </property>
+   <property name="statusTip">
+    <string>Open 2D drawer window</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_English">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/16x16/flag_usa.png</normaloff>:/Runge/Resources/16x16/flag_usa.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;English</string>
+   </property>
+   <property name="statusTip">
+    <string>Choose English interface language</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Russian">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/16x16/flag_russia.png</normaloff>:/Runge/Resources/16x16/flag_russia.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Russian</string>
+   </property>
+   <property name="statusTip">
+    <string>Choose Russian interface language</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_Contents">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/16x16/help.png</normaloff>:/Runge/Resources/16x16/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Contents</string>
+   </property>
+   <property name="statusTip">
+    <string>Open Help (assistant)</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="action_About_Runge">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/16x16/graph_edge_directed.png</normaloff>:/Runge/Resources/16x16/graph_edge_directed.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;About Runge</string>
+   </property>
+   <property name="statusTip">
+    <string>Show information about Runge</string>
+   </property>
+  </action>
+  <action name="actionMRU1">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/folder.png</normaloff>:/Runge/Resources/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;1</string>
+   </property>
+  </action>
+  <action name="actionMRU2">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/folder.png</normaloff>:/Runge/Resources/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;2</string>
+   </property>
+  </action>
+  <action name="actionMRU3">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/folder.png</normaloff>:/Runge/Resources/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;3</string>
+   </property>
+  </action>
+  <action name="actionMRU4">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/folder.png</normaloff>:/Runge/Resources/folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;4</string>
+   </property>
+  </action>
+  <action name="actionClearAllMRUs">
+   <property name="text">
+    <string>&amp;Clear all items</string>
+   </property>
+  </action>
+  <action name="action_3D_Draw">
+   <property name="icon">
+    <iconset resource="runge.qrc">
+     <normaloff>:/Runge/Resources/32x32/environment.png</normaloff>:/Runge/Resources/32x32/environment.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;3D Draw</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="runge.qrc"/>
+ </resources>
+ <connections/>
+</ui>

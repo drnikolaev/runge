@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<runge:config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:runge="http://www.cvmlib.com/runge" xsi:schemaLocation="http://www.cvmlib.com/runge RungeConfig.xsd" >
+  <solvers>
+
+    <solver type="FTX_F">
+      <dll>../../../../lib64/des_engl_em64t_ilp64.dll</dll>
+      <routine>SENGL</routine>
+      <size2>0</size2>
+      <size1>7</size1>
+      <size0>0</size0>
+      <name>England: x' = F(t,x)</name>
+    </solver>
+
+    <solver type="AFI_FAFI">
+      <dll>../../../../lib64/des_lou_em64t_ilp64.dll</dll>
+      <routine>SLOUI</routine>
+      <size2>7</size2>
+      <size1>5</size1>
+      <size0>0</size0>
+      <name>Lawson: x' = A(t)x + fi(t)</name>
+    </solver>
+
+    <solver type="FTX_FFJ">
+      <dll>../../../../lib64/des_lou_em64t_ilp64.dll</dll>
+      <routine>SLOUN</routine>
+      <size2>6</size2>
+      <size1>6</size1>
+      <size0>0</size0>
+      <name>Lawson: x' = F(t,x)</name>
+    </solver>
+
+    <solver type="BUTX_BFU">
+      <dll>../../../../lib64/des_lou_em64t_ilp64.dll</dll>
+      <routine>SLOUU</routine>
+      <size2>5</size2>
+      <size1>6</size1>
+      <size0>0</size0>
+      <name>Lawson: x' = Bx + f(t,x)</name>
+    </solver>
+
+    <solver type="FX_FFJ">
+      <dll>../../../../lib64/des_ros_em64t_ilp64.dll</dll>
+      <routine>SROSA</routine>
+      <size2>6</size2>
+      <size1>4</size1>
+      <size0>0</size0>
+      <name>Rosenbrock: x' = F(x)</name>
+    </solver>
+
+    <solver type="FTX_FFJFT">
+      <dll>../../../../lib64/des_ros_em64t_ilp64.dll</dll>
+      <routine>SROSN</routine>
+      <size2>6</size2>
+      <size1>6</size1>
+      <size0>0</size0>
+      <name>Rosenbrock: x' = F(t,x)</name>
+    </solver>
+
+  </solvers>
+</runge:config>

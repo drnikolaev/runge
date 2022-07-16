@@ -1,0 +1,736 @@
+\documentclass[12pt]{article}
+%\usepackage[html,1,sections+,pic-array,pic-eqnarray,pic-tabbing,pic-tabular,fonts+]{tex4ht}
+\usepackage[T1]{fontenc}
+%\usepackage[T2C]{fontenc}
+\usepackage[full]{textcomp}
+%\usepackage{calc}
+\usepackage{array}
+\usepackage{amsmath,amsfonts,amssymb,euscript}
+%\usepackage[english,russian]{babel}
+\usepackage[euler-digits]{eulervm}
+\usepackage{color}
+\usepackage{tabularx}
+\usepackage{paralist}
+\usepackage{xspace}
+%\usepackage{fancyvrb}
+%\usepackage{fancyhdr}
+
+%\definecolor{darkgreen}{rgb}{0,0.5,0}
+%\definecolor{darkblue}{rgb}{0,0,0.5}
+
+\newcommand{\FORTRAN}{\textsf{FORTRAN}\xspace}
+
+%\renewcommand\tabularxcolumn[1]{>{\small}m{#1}}
+%\newcolumntype{Y}{>{\vphantom{$\big|$}\raggedright\arraybackslash}X}
+%\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+
+%\title{Runge Title}
+%\author{Sergei Nikolaev}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\maketitle
+
+%\HPage{Runge Manual} 
+%\EndHPage{}
+
+% http://tug.org/applications/tex4ht/mn12.html#mn12-2
+
+%\HPage{Introduction} 
+\section{Introduction}
+\subsection{What it does}
+Runge is an Interactive Solver for Systems of 
+Ordinary Differential Equations. It solves initial 
+value problem (aka Cauchy problem) defined as the following:
+for a given system of ordinary differential equations
+\[
+\dot x=F(t,x),\quad (t,x)\in \mathbb R^{n+1}
+\]
+and given initial values
+\[
+x(t_0)=x_0
+\]
+find solution 
+\[
+x(t_k)\in\mathbb R^n
+\] 
+at a given point of ``time'' i.e. for a given value \(t_k\) of \textit{independent variable} \(t\). 
+Actually Runge produces solutions set
+\[
+x(t_0),x(t_1),x(t_2),\dots,x(t_k)
+\]
+where \(k\) is the number of steps taken. This allows to build 
+\textit{trajectories} of solutions.
+
+
+\subsection{Why Runge?}
+\begin{compactitem}
+\item It's fast. It utilizes BLAS and LAPACK \FORTRAN libraries optimized
+for modern multi-core processors.
+\item It's interactive. It allows you to start a solution by mouse click on a plane.
+\item It's precise. It uses Runge Rule to adjust step length to satisfy required precision on each step.
+\item It's effective. When it needs to compute derivatives (Jacobian matrix, for example) 
+it does that \textit{analytically}, i.e. without using numerical methods.
+\item It's portable. It works on Windows and Linux (32 and 64 bit versions) and Mac OSX (64 bit only).
+\item It's open. It allows you to implement and embed your own algorithms (aka ``solvers'').
+\item It's easy to use. It allows to export results to MS Excel and MATLAB.
+\item It's free. It's distributed under 
+\Link[http://www.boost.org/LICENSE_1_0.txt target="_blank"]{}{}Boost Software License\EndLink.
+\end{compactitem}
+
+\subsection{System Types and Solvers}
+Runge comes with pre-installed solvers optimized for solving differential equations of different types:
+\begin{compactitem}
+\item Type 1. Generic non-autonomous system
+\[
+\dot x=F(t,x)
+\]
+\item Type 2. Generic autonomous system (it's a subset of Type 1, 
+i.e. you can use both types 1 and 2 for autonomous sytems --- sometimes 
+it makes sense for choosing appropriate solver)
+\[
+\dot x=F(x)
+\]
+\item Type 3. Pseudo-linear system 
+(here it's assumed that \(\phi(x)\) is relatively small compared to matrix \(A(t)\))
+\[
+\dot x=A(t)x+\phi(x)
+\]
+\item Type 4. Pseudo-linear system with constant matrix B
+\[
+\dot x=Bx+f(t,x)
+\]
+\end{compactitem}
+The solvers (algorithms) coming in standard package are:
+\begin{compactitem}
+\item Runge-Kutta process modification developed by R. England. 
+Fast and precise method of fifth order suitable for solving systems of Type 1.
+See \cite{England}.
+\item Exponential method modification developed by J.D. Lawson. 
+It's recommended for linear and quasi-linear systems of Type 1,3 and 4 (including stiff ones).
+The method is A-stable for linear systems, i.e. residuals do not depend on step length.
+See \cite{Lawson}.
+\item Implicit process developed by H.H. Rosenbrock. 
+It's recommended for non-linear systems of Type 1 and 2 (including stiff ones).
+See \cite{Rosenbrock}.
+\end{compactitem}
+
+\subsection{Expressions and Functions}
+
+\Link{}{expressions}\EndLink
+The following functions and operators are supported for programming the systems mentioned above.
+
+
+%\setlength\extrarowheight{2pt}
+\begin{tabular}{|>{\large\ttfamily}r|l|} 
+\hline
++ - * / ^ & arithmetic operators: add, subtract, multiply, divide, power\\\hline
+exp(x) & \(e^x\)\\\hline
+sqrt(x) & \(\sqrt x\)\\\hline
+log(x) & natural logarithm of x\\\hline
+log10(x) & common (base 10) logarithm of x\\\hline
+sin(x) & sine of x\\\hline
+cos(x) & cosine of x\\\hline
+tan(x) & tangent of x\\\hline
+asin(x) & arc sine of x\\\hline
+acos(x) & arc cosine of x\\\hline
+atan(x) & arc tangent of x\\\hline
+sinh(x) & hyperbolic sine of x\\\hline
+cosh(x) & hyperbolic cosine of x\\\hline
+tanh(x) & hyperbolic tangent of x\\\hline
+sinint(x) & sine integral of x \[\int_0^x \frac{\sin t}{t}dt\]\\\hline
+cosint(x) & cosine integral of x \[-\int_x^\infty \frac{\cos t}{t}dt\]\\\hline
+sign(x) & sign of x 
+\[
+ \left\{
+  \begin{aligned}
+-1 & \text{ if } x < 0\\
+ 0 & \text{ if } x = 0\\
+ 1 & \text{ if } x > 0
+  \end{aligned}
+ \right.
+\]\\\hline
+abs(x) & \(|x|\)\\\hline
+iif(x,expr1,expr2) & immediate if
+\[
+ \left\{
+  \begin{aligned}
+expr1 & \text{ if } x < 0\\
+expr2 & \text{ if } x \ge 0
+  \end{aligned}
+ \right.
+\]\\\hline
+%delta(x,y) & delta function of x and y
+%\[
+% \left\{
+%  \begin{aligned}
+%\infty & \text{ if } x = y\\
+%0 & \text{ if } x \ne y
+%  \end{aligned}
+% \right.
+%\]\\\hline
+sat(x,y) & satellite function of x and y
+\[
+ \left\{
+  \begin{aligned}
+1 & \text{ if } x > |y|\\
+0 & \text{ if } -|y| \le x \le |y|\\
+-1 & \text{ if } x < -|y|
+  \end{aligned}
+ \right.
+\]\\\hline
+i & 1 (one)\\\hline
+ & 0 (empty field means zero)\\\hline
+\end{tabular}
+
+Examples: \texttt{2*sin(t-1)+cos(t)-x^2}, \texttt{sqrt(abs(x))}, \texttt{iif(t,sin(x),cos(x))} etc.
+
+
+
+\section{Quick Tour}
+
+When started, Runge looks like this:
+
+\Picture[Main Window]{mainWindow.png}
+
+There are 4 areas here:
+\begin{enumerate}
+\item Menu and toolbar.
+\item Left pane with four selectable sub-panes.
+\item Solutions computed.
+\item Right pane with equations you enter and solutions' values you compute.
+\end{enumerate}
+
+If you click Start button \Picture[Start Button]{startButton.png}
+at this moment it would solve \(\dot x=0,\ t\in[0,1]\) problem.
+That's because empty field for \(F(t,x)\) system on the right pane is equivalent to \(0\)
+and default range for independent variable is \([0,1]\). Click Start button \Picture[Start Button]{startButton.png}
+or choose ``Start'' item in ``Run'' menu
+
+\Picture[Run Menu]{runMenu.png}
+
+Select ``Solutions'' subpane and click on first solution to see results on the right pane:
+
+\Picture[Solutions]{mainWindowSolutions.png}
+
+The columns you see out there are: values of independent variables \(t_i, i=0,1,\dots\), 
+solution values \(x(t_i), i=0,1,\dots\) and \textit{recommended} step values.
+You can also delete this solution or export it to MS Excel comma-separated values file or to MATLAB script
+using the following buttons:
+
+\Picture[]{exportRemove.png}
+
+Click 2D Draw button \Picture[2D Draw Button]{2DdrawButton.png} to see solution graph:
+
+\Picture[2D Draw Window]{2DdrawWindow.png}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Main Menu}
+
+\subsection{File Menu}
+
+\Picture[]{fileMenu.png}
+
+Here you can:
+\begin{compactitem}
+\item Start new file (new system to solve) by using Ctrl~N (Cmd~N) combination.
+\item Open existing Runge file by using Ctrl~O (Cmd~O) combination.
+\item Open recently used Runge file by using this sub-menu:
+
+\Picture[]{fileMenuMRU.png}
+
+\item Save current Runge file by using Ctrl~S (Cmd~S) combination.
+\item Save current Runge file with different name.
+\end{compactitem}
+
+Runge file stores the system you entered and all solutions and their properties.
+
+
+\subsection{Options Menu}
+
+Windows and Linux: \Picture[]{optionsMenu.png} Mac: \Picture[]{optionsMenuMac.png}
+
+Here you can:
+\begin{compactitem}
+\item Choose Runge configuration file. On Mac use main "Runge" menu, item "Preferences".
+ Use it only if you want to add your own algorithms (aka ``solvers''). 
+Keep default Runge*.xml configuration otherwise.
+\item Choose font for entering expressions.
+\item Choose language (restart required). Currently English and Russian are supported only.
+\end{compactitem}
+
+
+\subsection{Run Menu}
+
+\Picture[]{runMenu.png}
+
+Here you can:
+\begin{compactitem}
+\item Start solving your system.
+\item Puse it if it's started.
+\item Resume it if it's paused.
+\item Stop it if it's started.
+\end{compactitem}
+
+
+\subsection{View Menu}
+
+
+\Picture[]{graphicsMenu.png}
+
+Call it to open 2D or 3D Drawer window.
+
+\subsection{Help Menu}
+
+Call it to open Runge Manual.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\section{Programming and Solving}
+
+Before solving your system of ordinary differential equations you need to program it in Runge.
+This section describes the way you can do that.
+
+\subsection{System}
+
+\begin{enumerate}
+
+\item Choose type of your system:
+
+\Picture[System Type]{systemType.png}
+
+\item Choose dimension:
+
+\Picture[Dimension]{dimension.png}
+
+\item Choose independent variable. It should be valid identifier (i.e. a string beginning with letter):
+
+\Picture[Independent Variable]{indepVar.png}
+
+\item Enter the system you'd like to solve. First column is for dependent variables 
+(valid identifiers, i.e. strings beginning with letter), second one is for equations.
+Equations should be valid \Link{expressions}{}expressions\EndLink{}
+containing arithmetic operators and elementary functions.
+You can also use macros (like macro ``p'' shown below) for repeating expressions:
+
+\Picture[System]{systemKrug.png}
+
+The following system is entered at this picture:
+\[
+ \left\{
+  \begin{aligned}
+\dot x&=y+xp\\
+\dot y&=-x+yp
+  \end{aligned}
+ \right.
+\]
+
+
+\end{enumerate}
+
+
+\subsection{Parameters}
+
+\begin{enumerate}
+
+
+\item Choose solver. Not every solver works for a given system type:
+
+\Picture[Solver]{solver.png}
+
+\item Set start parameters, values and macros:
+
+\Picture[Parameters]{parametersWindow.png}
+
+Here you can set:
+ 
+\begin{compactitem}
+\item \textbf{Start t} That's the initial value of the independent variable.
+\item \textbf{End t} That's the end value of the independent variable --- last solution will be computed at this point.
+\item \textbf{H} Initial step. Real step will be computed according to precision required.
+\item \textbf{Hmin} Minimum step allowed. If precision can't be reached even for this step, solver fails.
+\item \textbf{Hmax} Maximum step allowed.
+\item \textbf{Eps} Absolute precision required on each step.
+\item \textbf{P} Relative precision measure. If some component's absolute value becomes greater than P, 
+it gets normalized when precision compared to Eps.
+\item \textbf{Macros} List with macros. Here we have
+\[
+p=2-x^2-y^2
+\]
+therefore the final system turns to be 
+\[
+ \left\{
+  \begin{aligned}
+\dot x&=y+x(2-x^2-y^2)\\
+\dot y&=-x+y(2-x^2-y^2)
+  \end{aligned}
+ \right.
+\]
+\item \textbf{Dep. var. - Start Value} Initial values for each dependent variable.
+In this particular case we have:
+\[
+x(t_0)=2,\ y(t_0)=2,
+\]
+where \(t_0=0\), see Start t above.
+\end{compactitem}
+
+\end{enumerate}
+
+
+
+\subsection{Solution}
+
+\begin{enumerate}
+
+\item Click Start button \Picture[Start Button]{startButton.png} to start solving the system.
+For big systems or long time ranges you might see progress bar
+
+\Picture[Progress Bar]{progressBar.png}
+
+Here you can stop, pause and resume solving process by using appropriate buttons.
+
+\item Explore solution
+
+\Picture[]{krugSolution.png}
+
+Every solution has an id starting from zero.
+
+\item Explore solution graphically (here you can select different 
+variables for X and Y axes):
+
+\Picture[]{krugTX.png}
+\Picture[]{krugXY.png}
+
+\end{enumerate}
+
+\subsection{Export}
+
+Use Export feature to export solution to other programs like MS Excel or MATLAB
+
+\Picture[]{exportRemove.png}
+
+Excel should read it like this:
+
+\Picture[]{toExcel.png}
+
+MATLAB should read it like this:
+
+\Picture[]{toMATLAB.png}
+
+And after issuing a command like
+
+\texttt{>{}> plot(solution0(:,2), solution0(:,3));}
+
+it should render a plot:
+
+\Picture[]{plotMATLAB.png}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\section{2D Graphics}
+
+\subsection{2D Drawer window}
+
+Click \Picture[]{2DdrawButton.png} to bring 2D Drawer window which can also be used to start 
+solving the system you entered interactively. You can open few windows by clicking this button multiple times.
+
+\Picture[]{2DdrawParts.png}
+
+\begin{enumerate}
+\item Toolbar (each button function explained below).
+\item X axis variable. This is independent variable by default.
+\item Y axis variable.
+\item Graphics plane
+\item Y axis with marks. Mark step is 1 coordinate unit (adjustable), marks can be turned off.
+\item X axis with marks. Mark step is 1 coordinate unit (adjustable), marks can be turned off.
+\item Solution. It has a holder at the beginning looking like a small circle. Click on it to select a solution 
+(color gets changed, \textit{solution also gets selected in main window}). Click somewhere else to unselect.
+\item Current mouse coordinates (this is handy to start new solutions).
+\item Resizing handle. You can resize this window as much as you want.
+\end{enumerate}
+
+\subsection{Interactively starting solution from given point}
+
+Click ``Run froim point'' button \Picture[]{runFromPointButton.png} to enter the mode (mouse cursor will be changed accordingly).
+Click on a plain where you want to run new solution from. You should get something like this:
+
+\Picture[]{newSolution.png}
+
+Note that new solution gets added to the main window list and it's also drawn on every other drawer open.
+
+You can quickly create a set of solutions by clicking at different points:
+
+\Picture[]{solutionsSet.png}
+
+
+
+\subsection{Selecting solutions}
+
+Every solution has a first point where independent variable \(t=t_0\).
+It's marked by a small circle called ``handle'':
+
+\Picture[]{unselectedSolutions.png}
+
+Click it to select:
+
+\Picture[]{selectedSolution.png}
+
+Note how it gets selected in main window (it works in both ways --- you can select it in the list as well).
+You can explore, export and remove selected solution.
+
+Selected solution is marked by different color for each second step.
+You choose the color using the color menu (since version 1.1, see below).
+Sometimes it's handy to observe how steps change:
+
+\Picture[]{selectedStripes.png}
+
+
+
+
+
+
+\subsection{Zoom and Pan}
+
+Click Zoom button \Picture[]{zoomButton.png} to bring zoom menu
+
+\Picture[]{zoomMenu.png}
+
+Select Zoom In or press Ctrl~+ combination to increase the drawing in 2:1 ratio:
+
+\Picture[]{solutionsSetZoomed.png}
+
+Zoom in level is virtually endless.
+Use ``Zoom Out'' to unzoom (Ctrl~--). Use ``Zoom to rectangle'' (Ctrl~Z) to select a rectangle by mouse.
+This rectangle would be scaled to. Use ``Fit all'' (Ctrl~F) to show everything.
+
+Click Pan button \Picture[]{panButton.png} to enter Panning mode (mouse cursor changes).
+You can drag your drawing for exploring its different parts. Panning is available only 
+when there is something out of window borders.
+
+
+\subsection{Color}
+
+Click Palette button 
+%\Picture[]{colorButton.png}
+ to bring the color menu:
+
+\Picture[]{colorMenu.png}
+
+By selecting first item you can:
+
+\begin{compactitem}
+\item change color of selected solution (if one is selected)
+\item change \textit{current} color for all subsequet solutions otherwise
+\end{compactitem}
+
+Please note that said above is also valid for all odd steps.
+
+By selecting second item you can:
+
+\begin{compactitem}
+\item change color of each even step of selected solution (if one is selected)
+\item change \textit{current} color of each even step for all subsequet solutions otherwise
+\end{compactitem}
+
+For example:
+
+\Picture[]{coloredSolutions.png}
+
+
+\subsection{Settings}
+
+Click Drawer Settings button \Picture[]{drawerSettingsButton.png} to bring settings window:
+
+\Picture[]{drawerSettings.png}
+
+Here you can:
+\begin{enumerate}
+\item Turn on/off axes. If axes are turned on you can:
+\begin{compactitem}
+\item Click Adjust button to adjust axes lengths automatically according to current drawing.
+\item Click Color... button to set axes color.
+\item Edit semi-axes lengths manually (in coordinate units).
+\end{compactitem}
+
+\item Turn on/off line widths for axes and solutions. When turned off, the lines are drawn 
+without widths at any scale level (``hair'' lines). Sometimes for better 
+quality of exported images you'd need to
+set those widths manually. 
+
+\item Turn on/off axes marks. If axes marks are turned on you can:
+\begin{compactitem}
+\item Change X axis step (default is 1).
+\item Change Y axis step (default is 1).
+\item Set length of marks \textit{in pixels}.
+\end{compactitem}
+
+\item Change diameter of solution handles \textit{in pixels}.
+
+\item Make the drawer to rescale each time new solution added. This mode (default) helps 
+to keep seeing everything.
+\end{enumerate}
+
+
+\subsection{Export to File}
+
+
+Click Export to File button \Picture[]{exportButton.png} to open Export window:
+
+\Picture[]{exportToImage.png}
+
+Here you can:
+\begin{enumerate}
+\item Choose image type:
+
+\Picture[]{imageTypes.png}
+
+This list is platform-dependent.
+\item Set image width and height in pixels.
+\item Set JPEG quality if it's selected.
+\item Make the drawer to open newly created image using OS default viewer:
+
+\Picture[]{exportedImage.png}
+
+Here is 300x300 result sample is shown:
+
+\Picture[]{exportedSolution.png}
+
+\end{enumerate}
+
+
+\subsection{Print to Document/Paper}
+
+Click Print button \Picture[]{printButton.png} to open Print to Document/Paper window:
+
+\Picture[]{printWindow.png}
+
+\begin{enumerate}
+\item Choose where to print: to PDF, PS or paper.
+\item Choose document/paper size:
+
+\Picture[]{documentSizes.png}
+
+This list is platform-dependent.
+
+\item Set different lines widths and handle diameter im millimeters.
+
+\item Make the drawer to open newly created document using OS default viewer:
+
+\Picture[]{acrobat.png}
+
+\end{enumerate}
+
+
+\subsection{Help}
+
+Click Help button \Picture[]{helpButton.png} to open Runge Manual.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\section{3D Graphics}
+
+\subsection{3D Drawer window}
+
+Click \Picture[]{3DdrawButton.png} to bring 3D Drawer window (available when system dimension is 2 or greater). 
+You can open few windows by clicking this button multiple times.
+
+\Picture[]{3DdrawWindow.png}
+
+Here you can choose what variable to assign to what axis and 
+rotate solutions drawing using slides and spinners on the left side. Left/right click + mouse drag
+rotate by XY and XZ exes respectively. Use Zoom spinner to scale the drawing.
+
+
+\subsection{Pan}
+
+Click Pan button \Picture[]{panButton.png} to enter Panning mode (mouse cursor changes).
+You can drag your drawing for exploring its different parts. 
+
+
+
+\subsection{Settings}
+
+Click Drawer Settings button \Picture[]{drawerSettingsButton.png} to bring settings window:
+
+\Picture[]{3DdrawerSettings.png}
+
+Here you can:
+\begin{enumerate}
+\item Turn on/off axes. If axes are turned on you can:
+\begin{compactitem}
+\item Edit axes' lengths manually (in coordinate units).
+\item Click Color... button to set each axis color.
+\item Click Adjust button to adjust axes lengths automatically according to current drawing.
+\end{compactitem}
+\item Eidt line widths for axes and solutions (in pixels). 
+\item Change diameter of solution handles (in pixels).
+\end{enumerate}
+
+
+
+\subsection{Export to File}
+
+Click Export to File button \Picture[]{exportButton.png} to open Export window:
+
+\Picture[]{exportToImage.png}
+
+Here you can:
+\begin{enumerate}
+\item Choose image type:
+
+\Picture[]{imageTypes.png}
+
+This list is platform-dependent.
+\item Set image width and height in pixels.
+\item Set JPEG quality if it's selected.
+\item Make the drawer to open newly created image using OS default viewer.
+\end{enumerate}
+
+
+\subsection{Help}
+
+Click Help button \Picture[]{helpButton.png} to open Runge Manual.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{thebibliography}{9}
+\bibitem{England}
+\textit{R. England.} Error Estimates for Runge-Kutta Type Solutions to Systems of 
+Ordinary Differential Equations 
+// Research and Development Department, Pressed Steel Fisher Ltd., Cowley, Oxford, UK. October 1968
+\bibitem{Lawson}
+\textit{Lawson J.D.} Generalized Runge-Kutta processes for stable systems with large Lipschitz constants 
+// SIAM Journal on Numerical Analysis, 1967, V. 4, No 3.
+\bibitem{Rosenbrock}
+\textit{H.H. Rosenbrock} Some general implicit processes for the numerical solution of differential equations
+Comput. J., 5 (1963) pp.329-330.
+\end{thebibliography}
+
+%Back to \ExitHPage{Introduction}
+%\EndHPage{}
+
+
+\end{document}

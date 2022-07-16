@@ -1,0 +1,461 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>2D Graphics</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,2,sections+,fonts+,imgdir:images/ --> 
+<meta name="src" content="index_en.tex"> 
+<meta name="date" content="2013-11-14 12:32:00"> 
+<link rel="stylesheet" type="text/css" href="index_en.css"> 
+</head><body 
+>
+   <!--l. 444--><div class="crosslinks"><p class="noindent"><span 
+class="ecrm-1200">[</span><a 
+href="index_ense6.html" ><span 
+class="ecrm-1200">next</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense4.html" ><span 
+class="ecrm-1200">prev</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense4.html#tailindex_ense4.html" ><span 
+class="ecrm-1200">prev-tail</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="#tailindex_ense5.html"><span 
+class="ecrm-1200">tail</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_en.html#index_ense5.html" ><span 
+class="ecrm-1200">up</span></a><span 
+class="ecrm-1200">] </span></p></div>
+   <h3 class="sectionHead"><span class="titlemark"><span 
+class="ecrm-1200">5   </span></span> <a 
+href="index_en.html#QQ2-6-18" id="x6-180005"><span 
+class="ecrm-1200">2D Graphics</span></a></h3>
+<!--l. 446--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">5.1   </span></span> <a 
+href="index_en.html#QQ2-6-19" id="x6-190005.1"><span 
+class="ecrm-1200">2D Drawer window</span></a></h4>
+<!--l. 448--><p class="noindent" ><span 
+class="ecrm-1200">Click </span><img 
+src="images/2DdrawButton.png" alt=""  
+> <span 
+class="ecrm-1200">to bring 2D Drawer window which can also be used to start solving the</span>
+<span 
+class="ecrm-1200">system you entered interactively. You can open few windows by clicking this</span>
+<span 
+class="ecrm-1200">button multiple times.</span>
+<!--l. 451--><p class="indent" >   <img 
+src="images/2DdrawParts.png" alt=""  
+>
+<!--l. 454--><p class="indent" >
+      <dl class="enumerate"><dt class="enumerate">
+   <span 
+class="ecrm-1200">1.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Toolbar (each button function explained below).</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">2.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">X axis variable. This is independent variable by default.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">3.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Y axis variable.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">4.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Graphics plane</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">5.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Y axis with marks. Mark step is 1 coordinate unit (adjustable), marks</span>
+      <span 
+class="ecrm-1200">can be turned off.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">6.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">X axis with marks. Mark step is 1 coordinate unit (adjustable), marks</span>
+      <span 
+class="ecrm-1200">can be turned off.</span>
+                                                                          
+
+                                                                          
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">7.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Solution. It has a holder at the beginning looking like a small circle.</span>
+      <span 
+class="ecrm-1200">Click on it to select a solution (color gets changed, </span><span 
+class="ecti-1200">solution also gets</span>
+      <span 
+class="ecti-1200">selected in main window</span><span 
+class="ecrm-1200">). Click somewhere else to unselect.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">8.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Current mouse coordinates (this is handy to start new solutions).</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">9.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Resizing handle. You can resize this window as much as you want.</span></dd></dl>
+<!--l. 466--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">5.2   </span></span> <a 
+href="index_en.html#QQ2-6-20" id="x6-200005.2"><span 
+class="ecrm-1200">Interactively starting solution from given point</span></a></h4>
+<!--l. 468--><p class="noindent" ><span 
+class="ecrm-1200">Click &#8220;Run froim point&#8221; button </span><img 
+src="images/runFromPointButton.png" alt=""  
+> <span 
+class="ecrm-1200">to enter the mode (mouse cursor will be changed</span>
+<span 
+class="ecrm-1200">accordingly). Click on a plain where you want to run new solution from. You</span>
+<span 
+class="ecrm-1200">should get something like this:</span>
+<!--l. 471--><p class="indent" >   <img 
+src="images/newSolution.png" alt=""  
+>
+<!--l. 473--><p class="indent" >   <span 
+class="ecrm-1200">Note that new solution gets added to the main window list and it&#8217;s also drawn</span>
+<span 
+class="ecrm-1200">on every other drawer open.</span>
+<!--l. 475--><p class="indent" >   <span 
+class="ecrm-1200">You can quickly create a set of solutions by clicking at different points:</span>
+<!--l. 477--><p class="indent" >   <img 
+src="images/solutionsSet.png" alt=""  
+>
+<!--l. 481--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">5.3   </span></span> <a 
+href="index_en.html#QQ2-6-21" id="x6-210005.3"><span 
+class="ecrm-1200">Selecting solutions</span></a></h4>
+<!--l. 483--><p class="noindent" ><span 
+class="ecrm-1200">Every solution has a first point where independent variable</span> <img 
+src="images/index_en32x.png" alt="t = t0 "  class="math" ><span 
+class="ecrm-1200">. It&#8217;s marked</span>
+<span 
+class="ecrm-1200">by a small circle called &#8220;handle&#8221;:</span>
+<!--l. 486--><p class="indent" >   <img 
+src="images/unselectedSolutions.png" alt=""  
+>
+<!--l. 488--><p class="indent" >   <span 
+class="ecrm-1200">Click it to select:</span>
+<!--l. 490--><p class="indent" >   <img 
+src="images/selectedSolution.png" alt=""  
+>
+<!--l. 492--><p class="indent" >   <span 
+class="ecrm-1200">Note how it gets selected in main window (it works in both ways &#8212; you can</span>
+<span 
+class="ecrm-1200">select it in the list as well). You can explore, export and remove selected</span>
+<span 
+class="ecrm-1200">solution.</span>
+<!--l. 495--><p class="indent" >   <span 
+class="ecrm-1200">Selected solution is marked by different color for each second step. You choose</span>
+<span 
+class="ecrm-1200">the color using the color menu (since version 1.1, see below). Sometimes it&#8217;s handy</span>
+<span 
+class="ecrm-1200">to observe how steps change:</span>
+                                                                          
+
+                                                                          
+<!--l. 499--><p class="indent" >   <img 
+src="images/selectedStripes.png" alt=""  
+>
+<!--l. 506--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">5.4   </span></span> <a 
+href="index_en.html#QQ2-6-22" id="x6-220005.4"><span 
+class="ecrm-1200">Zoom and Pan</span></a></h4>
+<!--l. 508--><p class="noindent" ><span 
+class="ecrm-1200">Click Zoom button </span><img 
+src="images/zoomButton.png" alt=""  
+> <span 
+class="ecrm-1200">to bring zoom menu</span>
+<!--l. 510--><p class="indent" >   <img 
+src="images/zoomMenu.png" alt=""  
+>
+<!--l. 512--><p class="indent" >   <span 
+class="ecrm-1200">Select Zoom In or press Ctrl</span><span 
+class="ecrm-1200">&#x00A0;+ combination to increase the drawing in 2:1</span>
+<span 
+class="ecrm-1200">ratio:</span>
+<!--l. 514--><p class="indent" >   <img 
+src="images/solutionsSetZoomed.png" alt=""  
+>
+<!--l. 516--><p class="indent" >   <span 
+class="ecrm-1200">Zoom in level is virtually endless. Use &#8220;Zoom Out&#8221; to unzoom (Ctrl</span><span 
+class="ecrm-1200">&#x00A0;&#8211;). Use</span>
+<span 
+class="ecrm-1200">&#8220;Zoom to rectangle&#8221; (Ctrl</span><span 
+class="ecrm-1200">&#x00A0;Z) to select a rectangle by mouse. This rectangle would</span>
+<span 
+class="ecrm-1200">be scaled to. Use &#8220;Fit all&#8221; (Ctrl</span><span 
+class="ecrm-1200">&#x00A0;F) to show everything.</span>
+<!--l. 520--><p class="indent" >   <span 
+class="ecrm-1200">Click Pan button </span><img 
+src="images/panButton.png" alt=""  
+> <span 
+class="ecrm-1200">to enter Panning mode (mouse cursor changes). You can</span>
+<span 
+class="ecrm-1200">drag your drawing for exploring its different parts. Panning is available only when</span>
+<span 
+class="ecrm-1200">there is something out of window borders.</span>
+<!--l. 525--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">5.5   </span></span> <a 
+href="index_en.html#QQ2-6-23" id="x6-230005.5"><span 
+class="ecrm-1200">Color</span></a></h4>
+<!--l. 527--><p class="noindent" ><span 
+class="ecrm-1200">Click Palette button to bring the color menu:</span>
+<!--l. 531--><p class="indent" >   <img 
+src="images/colorMenu.png" alt=""  
+>
+<!--l. 533--><p class="indent" >   <span 
+class="ecrm-1200">By selecting first item you can:</span>
+<!--l. 536--><p class="indent" >
+      <ul>
+      <li class="compactitem"><span 
+class="ecrm-1200">change color of selected solution (if one is selected)</span>
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">change </span><span 
+class="ecti-1200">current </span><span 
+class="ecrm-1200">color for all subsequet solutions otherwise</span></li></ul>
+<!--l. 540--><p class="indent" >   <span 
+class="ecrm-1200">Please note that said above is also valid for all odd steps.</span>
+<!--l. 542--><p class="indent" >   <span 
+class="ecrm-1200">By selecting second item you can:</span>
+<!--l. 545--><p class="indent" >
+      <ul>
+      <li class="compactitem"><span 
+class="ecrm-1200">change color of each even step of selected solution (if one is selected)</span>
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">change  </span><span 
+class="ecti-1200">current  </span><span 
+class="ecrm-1200">color  of  each  even  step  for  all  subsequet  solutions</span>
+      <span 
+class="ecrm-1200">otherwise</span></li></ul>
+                                                                          
+
+                                                                          
+<!--l. 549--><p class="indent" >   <span 
+class="ecrm-1200">For example:</span>
+<!--l. 551--><p class="indent" >   <img 
+src="images/coloredSolutions.png" alt=""  
+>
+<!--l. 554--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">5.6   </span></span> <a 
+href="index_en.html#QQ2-6-24" id="x6-240005.6"><span 
+class="ecrm-1200">Settings</span></a></h4>
+<!--l. 556--><p class="noindent" ><span 
+class="ecrm-1200">Click Drawer Settings button </span><img 
+src="images/drawerSettingsButton.png" alt=""  
+> <span 
+class="ecrm-1200">to bring settings window:</span>
+<!--l. 558--><p class="indent" >   <img 
+src="images/drawerSettings.png" alt=""  
+>
+<!--l. 560--><p class="indent" >   <span 
+class="ecrm-1200">Here you can:</span>
+      <dl class="enumerate"><dt class="enumerate">
+   <span 
+class="ecrm-1200">1.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Turn on/off axes. If axes are turned on you can:</span>
+           <ul>
+           <li class="compactitem"><span 
+class="ecrm-1200">Click   Adjust   button   to   adjust   axes   lengths   automatically</span>
+           <span 
+class="ecrm-1200">according to current drawing.</span>
+           </li>
+           <li class="compactitem"><span 
+class="ecrm-1200">Click Color... button to set axes color.</span>
+           </li>
+           <li class="compactitem"><span 
+class="ecrm-1200">Edit semi-axes lengths manually (in coordinate units).</span></li></ul>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">2.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Turn on/off line widths for axes and solutions. When turned off, the lines</span>
+      <span 
+class="ecrm-1200">are drawn without widths at any scale level (&#8220;hair&#8221; lines). Sometimes for</span>
+      <span 
+class="ecrm-1200">better quality of exported images you&#8217;d need to set those widths</span>
+      <span 
+class="ecrm-1200">manually.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">3.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Turn on/off axes marks. If axes marks are turned on you can:</span>
+           <ul>
+           <li class="compactitem"><span 
+class="ecrm-1200">Change X axis step (default is 1).</span>
+           </li>
+           <li class="compactitem"><span 
+class="ecrm-1200">Change Y axis step (default is 1).</span>
+           </li>
+           <li class="compactitem"><span 
+class="ecrm-1200">Set length of marks </span><span 
+class="ecti-1200">in pixels</span><span 
+class="ecrm-1200">.</span></li></ul>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">4.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Change diameter of solution handles </span><span 
+class="ecti-1200">in pixels</span><span 
+class="ecrm-1200">.</span>
+                                                                          
+
+                                                                          
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">5.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Make the drawer to rescale each time new solution added. This mode</span>
+      <span 
+class="ecrm-1200">(default) helps to keep seeing everything.</span></dd></dl>
+<!--l. 588--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">5.7   </span></span> <a 
+href="index_en.html#QQ2-6-25" id="x6-250005.7"><span 
+class="ecrm-1200">Export to File</span></a></h4>
+<!--l. 591--><p class="noindent" ><span 
+class="ecrm-1200">Click Export to File button </span><img 
+src="images/exportButton.png" alt=""  
+> <span 
+class="ecrm-1200">to open Export window:</span>
+<!--l. 593--><p class="indent" >   <img 
+src="images/exportToImage.png" alt=""  
+>
+<!--l. 595--><p class="indent" >   <span 
+class="ecrm-1200">Here you can:</span>
+      <dl class="enumerate"><dt class="enumerate">
+   <span 
+class="ecrm-1200">1.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Choose image type:</span>
+      <!--l. 599--><p class="noindent" ><img 
+src="images/imageTypes.png" alt=""  
+>
+      <!--l. 601--><p class="noindent" ><span 
+class="ecrm-1200">This list is platform-dependent.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">2.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Set image width and height in pixels.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">3.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Set JPEG quality if it&#8217;s selected.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">4.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Make the drawer to open newly created image using OS default viewer:</span>
+      <!--l. 606--><p class="noindent" ><img 
+src="images/exportedImage.png" alt=""  
+>
+      <!--l. 608--><p class="noindent" ><span 
+class="ecrm-1200">Here is 300x300 result sample is shown:</span>
+      <!--l. 610--><p class="noindent" ><img 
+src="images/exportedSolution.png" alt=""  
+>
+      </dd></dl>
+<!--l. 615--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">5.8   </span></span> <a 
+href="index_en.html#QQ2-6-26" id="x6-260005.8"><span 
+class="ecrm-1200">Print to Document/Paper</span></a></h4>
+<!--l. 617--><p class="noindent" ><span 
+class="ecrm-1200">Click Print button </span><img 
+src="images/printButton.png" alt=""  
+> <span 
+class="ecrm-1200">to open Print to Document/Paper window:</span>
+<!--l. 619--><p class="indent" >   <img 
+src="images/printWindow.png" alt=""  
+>
+<!--l. 622--><p class="indent" >
+                                                                          
+
+                                                                          
+      <dl class="enumerate"><dt class="enumerate">
+   <span 
+class="ecrm-1200">1.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Choose where to print: to PDF, PS or paper.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">2.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Choose document/paper size:</span>
+      <!--l. 625--><p class="noindent" ><img 
+src="images/documentSizes.png" alt=""  
+>
+      <!--l. 627--><p class="noindent" ><span 
+class="ecrm-1200">This list is platform-dependent.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">3.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Set different lines widths and handle diameter im millimeters.</span>
+      </dd><dt class="enumerate">
+   <span 
+class="ecrm-1200">4.</span> </dt><dd 
+class="enumerate"><span 
+class="ecrm-1200">Make the drawer to open newly created document using OS default</span>
+      <span 
+class="ecrm-1200">viewer:</span>
+      <!--l. 633--><p class="noindent" ><img 
+src="images/acrobat.png" alt=""  
+>
+      </dd></dl>
+<!--l. 638--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">5.9   </span></span> <a 
+href="index_en.html#QQ2-6-27" id="x6-270005.9"><span 
+class="ecrm-1200">Help</span></a></h4>
+<!--l. 640--><p class="noindent" ><span 
+class="ecrm-1200">Click Help button </span><img 
+src="images/helpButton.png" alt=""  
+> <span 
+class="ecrm-1200">to open Runge Manual.</span>
+                                                                          
+
+                                                                          
+   <!--l. 650--><div class="crosslinks"><p class="noindent"><span 
+class="ecrm-1200">[</span><a 
+href="index_ense6.html" ><span 
+class="ecrm-1200">next</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense4.html" ><span 
+class="ecrm-1200">prev</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense4.html#tailindex_ense4.html" ><span 
+class="ecrm-1200">prev-tail</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense5.html" ><span 
+class="ecrm-1200">front</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_en.html#index_ense5.html" ><span 
+class="ecrm-1200">up</span></a><span 
+class="ecrm-1200">] </span></p></div>
+<!--l. 650--><p class="indent" >   <a 
+ id="tailindex_ense5.html"></a>   
+</body></html> 

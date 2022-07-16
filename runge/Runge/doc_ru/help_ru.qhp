@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+	<namespace>com.cvmlib.runge</namespace>
+	<virtualFolder>doc</virtualFolder>
+<!--
+	<customFilter name="Runge 1.0">
+		<filterAttribute>runge</filterAttribute>
+		<filterAttribute>1.0</filterAttribute>
+	</customFilter>
+-->
+	<filterSection>
+<!--
+		<filterAttribute>runge</filterAttribute>
+		<filterAttribute>1.0</filterAttribute>
+-->
+		<toc>
+			<section title="Runge Manual" ref="./index_ru.html">
+				<section title="Introduction" ref="./index_ruse1.html"/>
+				<section title="Quick Tour" ref="./index_ruse2.html"/>
+				<section title="Main Menu" ref="./index_ruse3.html"/>
+				<section title="Programming and Solving" ref="./index_ruse4.html"/>
+				<section title="2D Graphics" ref="./index_ruse5.html"/>
+				<section title="3D Graphics" ref="./index_ruse6.html"/>
+				<section title="References" ref="./index_ruli1.html"/>
+			</section>
+		</toc>
+		<keywords>
+			<keyword name="introduction" ref="./index_ruse1.html"/>
+			<keyword name="expressions" ref="./index_ruse1.html#expressions"/>
+			<keyword name="programming" ref="./index_ruse4.html"/>
+			<keyword name="2D grahics" ref="./index_ruse5.html"/>
+			<keyword name="2D grahics settings" ref="./index_ruse5.html#x6-240005.6"/>
+			<keyword name="2D grahics export to file" ref="./index_ruse5.html#x6-250005.7"/>
+			<keyword name="2D grahics print" ref="./index_ruse5.html#x6-260005.8"/>
+			<keyword name="3D grahics" ref="./index_ruse6.html"/>
+			<keyword name="3D grahics settings" ref="./index_ruse6.html#x7-310006.3"/>
+			<keyword name="3D grahics export to file" ref="./index_ruse6.html#x7-320006.4"/>
+		</keywords>
+		<files>
+			<file>*.html</file>
+			<file>*.css</file>
+            <file>images/*.png</file>
+		</files>
+	</filterSection>
+</QtHelpProject>

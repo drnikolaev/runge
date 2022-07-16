@@ -1,0 +1,769 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=latex 2013.11.2)  14 NOV 2013 12:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**\makeatletter\def\HCode{\futurelet\HCode\HChar}\def\HChar{\ifx"\HCode\def\HCo
+de"##1"{\Link##1}\expandafter\HCode\else\expandafter\Link\fi}\def\Link#1.a.b.c.
+{\g@addto@macro\@documentclasshook{\RequirePackage[#1,html]{tex4ht}}\let\HCode\
+documentstyle\def\documentstyle{\let\documentstyle\HCode\expandafter\def\csname
+ tex4ht\endcsname{#1,html}\def\HCode####1{\documentstyle[tex4ht,}\@ifnextchar[{
+\HCode}{\documentstyle[tex4ht]}}}\makeatother\HCode html,2,sections+,fonts+,img
+dir:images/.a.b.c.\input  index_en.tex
+(./index_en.tex (/usr/local/texlive/2013/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/tex4ht.sty
+version 2008-10-27-17:23
+Package: tex4ht 
+--------------------------------------
+--- Note --- for _ at preamble, use the command line option `early_'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ at preamble, use the command line option `early^'
+--------------------------------------
+\tmp:toks=\toks14
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/usepackage.4ht
+version 2009-05-21-09:32
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+Package textcomp Info: Changing ? sub-encoding to TS1/0 on input line 72.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen103
+\extrarowheight=\dimen104
+\NC@list=\toks15
+\extratabsurround=\skip43
+\backup@length=\skip44
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip45
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks16
+\ex@=\dimen105
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count87
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count88
+\leftroot@=\count89
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count90
+\DOTSCASE@=\count91
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count92
+\c@MaxMatrixCols=\count93
+\dotsspace@=\muskip10
+\c@parentequation=\count94
+\dspbrk@lvl=\count95
+\tag@help=\toks17
+\row@=\count96
+\column@=\count97
+\maxfields@=\count98
+\andhelp@=\toks18
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks19
+\multlinegap=\skip46
+\multlinetaggap=\skip47
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/euscript.sty
+Package: euscript 2009/06/22 v3.00 Euler Script fonts
+LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
+(Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/eulervm/eulervm.sty
+Package: eulervm 2005/01/11 v4.0 (WaS)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: dvips.def on input line 130.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
+\TX@col@width=\dimen114
+\TX@old@table=\dimen115
+\TX@old@col=\dimen116
+\TX@target=\dimen117
+\TX@delta=\dimen118
+\TX@cols=\count99
+\TX@ftn=\toks21
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2013/06/09 v2.4 Extended list environments
+\pltopsep=\skip48
+\plpartopsep=\skip49
+\plitemsep=\skip50
+\plparsep=\skip51
+\pl@lab=\toks22
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/tex4ht.4ht
+version 2009-01-07-07:11
+--------------------------------------
+--- Note --- for additional information, use the command line option `info'
+--------------------------------------
+
+::::::::::::::::::::::::::::::::::::::::::
+ TeX4ht info is available in the log file 
+::::::::::::::::::::::::::::::::::::::::::
+) (/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/tex4ht.sty
+version 2008-10-27-17:23
+
+--- needs --- tex4ht index_en ---
+\tmp:cnt=\count100
+\openout15 = `index_en.tmp'.
+
+(./index_en.tmp)
+\tmp:dim=\skip52
+--------------------------------------
+--- Note --- for XML code, use the command line option `xml' or `xhtml'
+--------------------------------------
+ (./index_en.xref)
+\:refout=\write3
+\openout3 = `index_en.xref'.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht
+--------------------------------------
+--- Note --- to remove the <?xml version=...?> processing instruction use the c
+ommand line option `no-VERSION'
+--------------------------------------
+--------------------------------------
+--- Note --- to remove the DOCTYPE declaration use the command line option `no-
+DOCTYPE'
+--------------------------------------
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+)
+--------------------------------------
+--- Note --- for non active _, use the command line option `no_'
+--------------------------------------
+--------------------------------------
+--- Note --- for _ of catcode 13, use the command line option `_13'
+--------------------------------------
+--------------------------------------
+--- Note --- for non active ^, use the command line option `no^'
+--------------------------------------
+--------------------------------------
+--- Note --- for ^ of catcode 13, use the command line option `^13'
+--------------------------------------
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht
+--------------------------------------
+--- Note --- For section filenames that reflect on their titles use the command
+ line option `sec-filename'
+--------------------------------------
+--------------------------------------
+--- Note --- for alternative charset, use the command line option `charset=...'
+
+--------------------------------------
+--------------------------------------
+--- Note --- to ignore CSS font decoration, use the `NoFonts' command line opti
+on
+--------------------------------------
+--------------------------------------
+--- Note --- for jpg bitmaps of pictures, use the `jpg' command line option. (C
+haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
+hes of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for gif bitmaps of pictures, use the `gif' command line option. (C
+haracter bitmaps are controled only by `g' records of tex4ht.env and `-g' switc
+hes of tex4ht.c) 
+--------------------------------------
+--------------------------------------
+--- Note --- for content and toc in 2 frames, use the command line option `fram
+es'
+--------------------------------------
+--------------------------------------
+--- Note --- for content, toc, and footnotes in 3 frames, use the command line 
+option `frames-fn'
+--------------------------------------
+--------------------------------------
+--- Note --- for file extension name xht, use the command line option `xht'
+--------------------------------------
+TeX4ht package options: html,2,sections+,fonts+,imgdir:images/
+--------------------------------------
+--- Note --- to ignore CSS code, use the command line option `-css
+--------------------------------------
+--------------------------------------
+--- Note --- for inline CSS code, use the command line option `css-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for pop ups on mouse over, use the command line option `mouseover'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for addressing images in a subdirectory, use the command line opti
+on `imgdir:.../'
+--------------------------------------
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+)
+\:tokwrite=\toks23
+\:tokpage=\toks24
+--------------------------------------
+--- Note --- for linear crosslinks of pages, use the command line option `next'
+
+--------------------------------------
+\openout15 = `index_en.4ct'.
+
+\:tocout=\write4
+\openout4 = `index_en.4tc'.
+
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/latex.4ht
+version 2009-05-21-09:32
+--------------------------------------
+--- Note --- for links into captions, instead of float heads, use the command l
+ine option `refcaption'
+--------------------------------------
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht
+--------------------------------------
+--- Note --- For mini tocs immediately aftter the header use the command line o
+ption `minitoc<'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements with valued data, use the command lin
+e option `enumerate+'
+--------------------------------------
+--------------------------------------
+--- Note --- for enumerated list elements li's with value attributes, use the c
+ommand line option `enumerate-'
+--------------------------------------
+--------------------------------------
+--- Note --- for CSS2 code, use the command line option `css2'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial tabular, use the command line option `pic-tabular'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap fbox'es, use the command line option `pic-fbox'
+--------------------------------------
+--------------------------------------
+--- Note --- for bitmap framebox'es, use the command line option `pic-framebox'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for inline footnotes use command line option `fn-in'
+--------------------------------------
+--------------------------------------
+--- Note --- for tracing of latex font commands, use the command line option `f
+onts'
+--------------------------------------
+--------------------------------------
+--- Note --- for width specifications of tabular p entries, use the `p-width' c
+ommand line option or a configuration similar to \Configure{HColWidth}{\HCode{ 
+style="width:\HColWidth"}}
+--------------------------------------
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+--------------------------------------
+--- Note --- for pictorial eqnarray, use the command line option `pic-eqnarray'
+
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ environments, use the command line option `pic
+-m' (not recommended!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial $...$ and $$...$$ environments with latex alt, use t
+he command line option `pic-m+' (not safe!!)
+--------------------------------------
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/fontmath.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/article.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht
+--------------------------------------
+--- Note --- for tocs without * entries, use command line option `notoc*'
+--------------------------------------
+--------------------------------------
+--- Note --- for tocs without * entries, use command line option `notoc*'
+--------------------------------------
+--------------------------------------
+--- Note --- to eliminate mini tables of contents, use the command line option 
+`nominitoc'
+--------------------------------------
+--------------------------------------
+--- Note --- for frames-like object-based table of contents, use the command li
+ne option `obj-toc'
+--------------------------------------
+--------------------------------------
+--- Note --- for files named derived from section titles, use the command line 
+option `sec-filename'
+--------------------------------------
+--------------------------------------
+--- Note --- for i-columns index, use the command line option `index=i' (e.g., 
+index=2)
+--------------------------------------
+)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/array.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+--------------------------------------
+--- Note --- for pictorial array, use the command line option `pic-array'
+--------------------------------------
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/amsmath.4ht
+version 2009-05-21-09:32
+\tmp:muskip=\muskip11
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/amstext.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/amsbsy.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/amsopn.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/amsfonts.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/amssymb.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/color.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/dvips.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/dvipsnam.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/dvipsnam.def)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/tabularx.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/paralist.4ht
+version 2009-05-21-09:32
+
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4.4ht)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/tex4ht/html4-math.4ht
+version 2009-05-18-23:01
+))
+(./index_en.aux)
+\openout1 = `index_en.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 31.
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 31.
+--- file index_en.css ---
+
+(./index_en.4ct) [1
+
+]
+--- file index_ense1.html ---
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 40.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+l. 46 Writing index_en.idv[1] (index_en0x.png)
+LaTeX Font Info:    Try loading font information for U+zeur on input line 46.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/eulervm/uzeur.fd
+File: uzeur.fd 2005/01/11 v4.0 (WaS)
+)
+LaTeX Font Info:    Try loading font information for U+zeus on input line 46.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/eulervm/uzeus.fd
+File: uzeus.fd 2005/01/11 v4.0 (WaS)
+)
+LaTeX Font Info:    Try loading font information for U+zeuex on input line 46.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/eulervm/uzeuex.fd
+File: uzeuex.fd 2005/01/11 v4.0 (WaS)
+)
+l. 50 Writing index_en.idv[2] (index_en1x.png)
+l. 54 Writing index_en.idv[3] (index_en2x.png)
+l. 57 Writing index_en.idv[4] (index_en3x.png)
+l. 57 Writing index_en.idv[5] (index_en4x.png)
+l. 59 Writing index_en.idv[6] (index_en5x.png)
+l. 62 Writing index_en.idv[7] (index_en6x.png)
+ [2]
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 68.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1cmss.fd
+File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+l. 85 Writing index_en.idv[8] (index_en7x.png)
+ [3]
+l. 91 Writing index_en.idv[9] (index_en8x.png)
+l. 95 Writing index_en.idv[10] (index_en9x.png)
+l. 95 Writing index_en.idv[11] (index_en10x.png)
+l. 96 Writing index_en.idv[12] (index_en11x.png)
+l. 100 Writing index_en.idv[13] (index_en12x.png)
+ [4]
+l. 128 Writing index_en.idv[14] (index_en13x.png)
+l. 129 Writing index_en.idv[15] (index_en14x.png)
+l. 141 Writing index_en.idv[16] (index_en15x.png)
+l. 142 Writing index_en.idv[17] (index_en16x.png)
+l. 144 Writing index_en.idv[18] (index_en17x.png)
+l. 153 Writing index_en.idv[19] (index_en18x.png)
+l. 155 Writing index_en.idv[20] (index_en19x.png)
+l. 173 Writing index_en.idv[21] (index_en20x.png)
+ [5]
+[6] [7]
+--- file index_ense2.html ---
+l. 194 --- needs --- mainWindow.png ---
+l. 204 --- needs --- startButton.png ---
+l. 205 Writing index_en.idv[22] (index_en21x.png)
+l. 206 Writing index_en.idv[23] (index_en22x.png)
+l. 206 Writing index_en.idv[24] (index_en23x.png)
+l. 207 Writing index_en.idv[25] (index_en24x.png)
+l. 207 --- needs --- startButton.png ---
+l. 210 --- needs --- runMenu.png ---
+l. 214 --- needs --- mainWindowSolutions.png ---
+l. 216 Writing index_en.idv[26] (index_en25x.png)
+l. 217 Writing index_en.idv[27] (index_en26x.png)
+l. 221 --- needs --- exportRemove.png ---
+l. 223 --- needs --- 2DdrawButton.png ---
+l. 225 --- needs --- 2DdrawWindow.png ---
+ [8
+
+] [9]
+--- file index_ense3.html ---
+l. 236 --- needs --- fileMenu.png ---
+l. 244 --- needs --- fileMenuMRU.png ---
+l. 255 --- needs --- optionsMenu.png ---
+l. 255 --- needs --- optionsMenuMac.png ---
+ [10
+
+]
+l. 269 --- needs --- runMenu.png ---
+l. 283 --- needs --- graphicsMenu.png ---
+ [11]
+--- file index_ense4.html ---
+l. 308 --- needs --- systemType.png ---
+l. 312 --- needs --- dimension.png ---
+l. 316 --- needs --- indepVar.png ---
+l. 324 --- needs --- systemKrug.png ---
+l. 327 Writing index_en.idv[28] (index_en27x.png)
+ [12
+
+]
+l. 347 --- needs --- solver.png ---
+l. 351 --- needs --- parametersWindow.png ---
+ [13]
+l. 365 Writing index_en.idv[29] (index_en28x.png)
+l. 369 Writing index_en.idv[30] (index_en29x.png)
+l. 379 Writing index_en.idv[31] (index_en30x.png)
+l. 382 Writing index_en.idv[32] (index_en31x.png)
+ [14]
+l. 393 --- needs --- startButton.png ---
+l. 396 --- needs --- progressBar.png ---
+l. 402 --- needs --- krugSolution.png ---
+l. 409 --- needs --- krugTX.png ---
+l. 410 --- needs --- krugXY.png ---
+l. 418 --- needs --- exportRemove.png ---
+l. 422 --- needs --- toExcel.png ---
+l. 426 --- needs --- toMATLAB.png ---
+l. 434 --- needs --- plotMATLAB.png ---
+ [15]
+--- file index_ense5.html ---
+l. 448 --- needs --- 2DdrawButton.png ---
+l. 451 --- needs --- 2DdrawParts.png ---
+ [16
+
+]
+l. 468 --- needs --- runFromPointButton.png ---
+l. 471 --- needs --- newSolution.png ---
+l. 477 --- needs --- solutionsSet.png ---
+l. 483 Writing index_en.idv[33] (index_en32x.png)
+l. 486 --- needs --- unselectedSolutions.png ---
+l. 490 --- needs --- selectedSolution.png ---
+l. 499 --- needs --- selectedStripes.png ---
+ [17]
+l. 508 --- needs --- zoomButton.png ---
+l. 510 --- needs --- zoomMenu.png ---
+l. 514 --- needs --- solutionsSetZoomed.png ---
+l. 520 --- needs --- panButton.png ---
+l. 531 --- needs --- colorMenu.png ---
+l. 551 --- needs --- coloredSolutions.png ---
+ [18]
+l. 556 --- needs --- drawerSettingsButton.png ---
+l. 558 --- needs --- drawerSettings.png ---
+ [19]
+l. 591 --- needs --- exportButton.png ---
+l. 593 --- needs --- exportToImage.png ---
+l. 599 --- needs --- imageTypes.png ---
+l. 606 --- needs --- exportedImage.png ---
+l. 610 --- needs --- exportedSolution.png ---
+l. 617 --- needs --- printButton.png ---
+l. 619 --- needs --- printWindow.png ---
+ [20]
+l. 625 --- needs --- documentSizes.png ---
+l. 633 --- needs --- acrobat.png ---
+l. 640 --- needs --- helpButton.png ---
+ [21]
+--- file index_ense6.html ---
+l. 654 --- needs --- 3DdrawButton.png ---
+l. 657 --- needs --- 3DdrawWindow.png ---
+l. 666 --- needs --- panButton.png ---
+l. 673 --- needs --- drawerSettingsButton.png ---
+l. 675 --- needs --- 3DdrawerSettings.png ---
+
+[22
+
+]
+l. 693 --- needs --- exportButton.png ---
+l. 695 --- needs --- exportToImage.png ---
+l. 701 --- needs --- imageTypes.png ---
+l. 712 --- needs --- helpButton.png ---
+ [23] [24]
+--- file index_enli1.html ---
+ [25
+
+] [26
+
+] (./index_en.aux) ) 
+Here is how much of TeX's memory you used:
+ 6661 strings out of 493309
+ 81458 string characters out of 6137842
+ 266320 words of memory out of 5000000
+ 9967 multiletter control sequences out of 15000+600000
+ 16533 words of font info for 43 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 30i,18n,29p,736b,421s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on index_en.dvi (26 pages, 101992 bytes).

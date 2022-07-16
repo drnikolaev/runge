@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QHelpCollectionProject version="1.0">
+	<assistant>
+		<title>Runge Help</title>
+        <applicationIcon>images/icon.png</applicationIcon>
+		<cacheDirectory>Runge</cacheDirectory>
+		<startPage>qthelp://com.cvmlib.runge/doc/index_ru.html</startPage>
+<!--
+		<cacheDirectory base="collection">help</cacheDirectory>
+		<aboutMenuText>
+			<text>Об Интерактивном Решателе Дифференциальных Уравнений Рунге</text>
+		</aboutMenuText>
+        <aboutDialog>
+            <file>about.txt</file>
+            <icon>images/icon32.png</icon>
+        </aboutDialog>
+-->
+		<enableDocumentationManager>false</enableDocumentationManager>
+		<enableAddressBar visible="true">true</enableAddressBar>
+		<enableFilterFunctionality>false</enableFilterFunctionality>
+	</assistant>
+	<docFiles>
+		<generate>
+			<file>
+				<input>help_ru.qhp</input>
+				<output>help_ru.qch</output>
+			</file>
+		</generate>
+		<register>
+			<file>help_ru.qch</file>
+		</register>
+	</docFiles>
+</QHelpCollectionProject>

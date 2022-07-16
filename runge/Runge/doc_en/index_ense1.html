@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  
+  "http://www.w3.org/TR/html4/loose.dtd">  
+<html > 
+<head><title>Introduction</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"> 
+<!-- html,2,sections+,fonts+,imgdir:images/ --> 
+<meta name="src" content="index_en.tex"> 
+<meta name="date" content="2013-11-14 12:32:00"> 
+<link rel="stylesheet" type="text/css" href="index_en.css"> 
+</head><body 
+>
+   <!--l. 40--><div class="crosslinks"><p class="noindent"><span 
+class="ecrm-1200">[</span><a 
+href="index_ense2.html" ><span 
+class="ecrm-1200">next</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="#tailindex_ense1.html"><span 
+class="ecrm-1200">tail</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_en.html#index_ense1.html" ><span 
+class="ecrm-1200">up</span></a><span 
+class="ecrm-1200">] </span></p></div>
+   <h3 class="sectionHead"><span class="titlemark"><span 
+class="ecrm-1200">1   </span></span> <a 
+href="index_en.html#QQ2-2-1" id="x2-10001"><span 
+class="ecrm-1200">Introduction</span></a></h3>
+<!--l. 41--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">1.1   </span></span> <a 
+href="index_en.html#QQ2-2-2" id="x2-20001.1"><span 
+class="ecrm-1200">What it does</span></a></h4>
+<!--l. 42--><p class="noindent" ><span 
+class="ecrm-1200">Runge is an Interactive Solver for Systems of Ordinary Differential Equations. It</span>
+<span 
+class="ecrm-1200">solves initial value problem (aka Cauchy problem) defined as the following: for a</span>
+<span 
+class="ecrm-1200">given system of ordinary differential equations</span>
+   <center class="math-display" >
+<img 
+src="images/index_en0x.png" alt="&#x02D9;x = F(t,x),  (t,x) &#x2208; &#x211D;n+ 1
+" class="math-display" ></center>
+<!--l. 48--><p class="nopar" > <span 
+class="ecrm-1200">and given initial values</span>
+   <center class="math-display" >
+<img 
+src="images/index_en1x.png" alt="x(t0)=  x0
+" class="math-display" ></center>
+<!--l. 52--><p class="nopar" > <span 
+class="ecrm-1200">find solution</span>
+   <center class="math-display" >
+<img 
+src="images/index_en2x.png" alt="x(tk)&#x2208; &#x211D;n
+" class="math-display" ></center>
+<!--l. 56--><p class="nopar" > <span 
+class="ecrm-1200">at a given point of &#8220;time&#8221; i.e. for a given value</span> <img 
+src="images/index_en3x.png" alt="tk "  class="math" > <span 
+class="ecrm-1200">of </span><span 
+class="ecti-1200">independent variable</span> <img 
+src="images/index_en4x.png" alt="t "  class="math" ><span 
+class="ecrm-1200">.</span>
+<span 
+class="ecrm-1200">Actually Runge produces solutions set</span>
+   <center class="math-display" >
+<img 
+src="images/index_en5x.png" alt="x(t0),x(t1),x(t2),..., x(tk)
+" class="math-display" ></center>
+<!--l. 61--><p class="nopar" > <span 
+class="ecrm-1200">where</span> <img 
+src="images/index_en6x.png" alt="k "  class="math" > <span 
+class="ecrm-1200">is the number of steps taken. This allows to build </span><span 
+class="ecti-1200">trajectories </span><span 
+class="ecrm-1200">of</span>
+                                                                          
+
+                                                                          
+<span 
+class="ecrm-1200">solutions.</span>
+<!--l. 66--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">1.2   </span></span> <a 
+href="index_en.html#QQ2-2-3" id="x2-30001.2"><span 
+class="ecrm-1200">Why Runge?</span></a></h4>
+<!--l. 68--><p class="noindent" >
+      <ul>
+      <li class="compactitem"><span 
+class="ecrm-1200">It&#8217;s fast. It utilizes BLAS and LAPACK </span><span 
+class="ecss-1200">FORTRAN </span><span 
+class="ecrm-1200">libraries optimized</span>
+      <span 
+class="ecrm-1200">for modern multi-core processors.</span>
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">It&#8217;s interactive. It allows you to start a solution by mouse click on a</span>
+      <span 
+class="ecrm-1200">plane.</span>
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">It&#8217;s precise. It uses Runge Rule to adjust step length to satisfy required</span>
+      <span 
+class="ecrm-1200">precision on each step.</span>
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">It&#8217;s effective. When it needs to compute derivatives (Jacobian matrix,</span>
+      <span 
+class="ecrm-1200">for  example)  it  does  that  </span><span 
+class="ecti-1200">analytically</span><span 
+class="ecrm-1200">,  i.e.  without  using  numerical</span>
+      <span 
+class="ecrm-1200">methods.</span>
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">It&#8217;s portable. It works on Windows and Linux (32 and 64 bit versions)</span>
+      <span 
+class="ecrm-1200">and Mac OSX (64 bit only).</span>
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">It&#8217;s open. It allows you to implement and embed your own algorithms</span>
+      <span 
+class="ecrm-1200">(aka &#8220;solvers&#8221;).</span>
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">It&#8217;s easy to use. It allows to export results to MS Excel and MATLAB.</span>
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">It&#8217;s free. It&#8217;s distributed under </span><a 
+href="http://www.boost.org/LICENSE_1_0.txt" target="_blank" ><span 
+class="ecrm-1200">Boost Software License</span></a><span 
+class="ecrm-1200">.</span></li></ul>
+<!--l. 81--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">1.3   </span></span> <a 
+href="index_en.html#QQ2-2-4" id="x2-40001.3"><span 
+class="ecrm-1200">System Types and Solvers</span></a></h4>
+<!--l. 82--><p class="noindent" ><span 
+class="ecrm-1200">Runge comes with pre-installed solvers optimized for solving differential equations</span>
+<span 
+class="ecrm-1200">of different types:</span>
+      <ul>
+      <li class="compactitem"><span 
+class="ecrm-1200">Type 1. Generic non-autonomous system</span>
+                                                                          
+
+                                                                          
+      <center class="math-display" >
+      <img 
+src="images/index_en7x.png" alt="x&#x02D9;=  F(t,x)
+      " class="math-display" ></center>
+      <!--l. 87--><p class="nopar" >
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">Type 2. Generic autonomous system (it&#8217;s a subset of Type 1, i.e. you</span>
+      <span 
+class="ecrm-1200">can use both types 1 and 2 for autonomous sytems &#8212; sometimes it</span>
+      <span 
+class="ecrm-1200">makes sense for choosing appropriate solver)</span>
+      <center class="math-display" >
+      <img 
+src="images/index_en8x.png" alt="x&#x02D9;=  F(x)
+      " class="math-display" ></center>
+      <!--l. 93--><p class="nopar" >
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">Type  3.  Pseudo-linear  system  (here  it&#8217;s  assumed  that</span>  <img 
+src="images/index_en9x.png" alt="&#x03D5;(x)  "  class="math" >  <span 
+class="ecrm-1200">is</span>
+      <span 
+class="ecrm-1200">relatively small compared to matrix</span> <img 
+src="images/index_en10x.png" alt="A(t)  "  class="math" ><span 
+class="ecrm-1200">)</span>
+      <center class="math-display" >
+      <img 
+src="images/index_en11x.png" alt="&#x02D9;x = A(t)x +  &#x03D5;(x)
+      " class="math-display" ></center>
+      <!--l. 98--><p class="nopar" >
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">Type 4. Pseudo-linear system with constant matrix B</span>
+      <center class="math-display" >
+      <img 
+src="images/index_en12x.png" alt="&#x02D9;x = Bx + f(t,x)
+      " class="math-display" ></center>
+      <!--l. 102--><p class="nopar" ></li></ul>
+<!--l. 104--><p class="noindent" ><span 
+class="ecrm-1200">The solvers (algorithms) coming in standard package are:</span>
+      <ul>
+      <li class="compactitem"><span 
+class="ecrm-1200">Runge-Kutta process modification developed by R. England. Fast and</span>
+      <span 
+class="ecrm-1200">precise method of fifth order suitable for solving systems of Type 1. See</span>
+      <span class="cite"><span 
+class="ecrm-1200">[</span><a 
+href="index_enli1.html#XEngland"><span 
+class="ecrm-1200">1</span></a><span 
+class="ecrm-1200">]</span></span><span 
+class="ecrm-1200">.</span>
+      </li>
+                                                                          
+
+                                                                          
+      <li class="compactitem"><span 
+class="ecrm-1200">Exponential  method  modification  developed  by  J.D.  Lawson.  It&#8217;s</span>
+      <span 
+class="ecrm-1200">recommended for linear and quasi-linear systems of Type 1,3 and 4</span>
+      <span 
+class="ecrm-1200">(including stiff ones). The method is A-stable for linear systems, i.e.</span>
+      <span 
+class="ecrm-1200">residuals do not depend on step length. See </span><span class="cite"><span 
+class="ecrm-1200">[</span><a 
+href="index_enli1.html#XLawson"><span 
+class="ecrm-1200">2</span></a><span 
+class="ecrm-1200">]</span></span><span 
+class="ecrm-1200">.</span>
+      </li>
+      <li class="compactitem"><span 
+class="ecrm-1200">Implicit process developed by H.H. Rosenbrock. It&#8217;s recommended for</span>
+      <span 
+class="ecrm-1200">non-linear systems of Type 1 and 2 (including stiff ones). See </span><span class="cite"><span 
+class="ecrm-1200">[</span><a 
+href="index_enli1.html#XRosenbrock"><span 
+class="ecrm-1200">3</span></a><span 
+class="ecrm-1200">]</span></span><span 
+class="ecrm-1200">.</span></li></ul>
+<!--l. 118--><p class="noindent" >
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="ecrm-1200">1.4   </span></span> <a 
+href="index_en.html#QQ2-2-5" id="x2-50001.4"><span 
+class="ecrm-1200">Expressions and Functions</span></a></h4>
+<!--l. 120--><p class="noindent" ><a 
+ id="expressions"></a><span 
+class="ecrm-1200">The following functions and operators are supported for programming the systems</span>
+<span 
+class="ecrm-1200">mentioned above.</span>
+                                                                          
+
+                                                                          
+   <div class="tabular"> <table id="TBL-1" class="tabular" 
+cellspacing="0" cellpadding="0" rules="groups" 
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1"></colgroup><colgroup id="TBL-1-2g"><col 
+id="TBL-1-2"></colgroup><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-1-1"  
+class="td11">           <span 
+class="ectt-1440">+ - * / ^ </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-1-2"  
+class="td11"> <span 
+class="ecrm-1200">arithmetic operators: add, subtract, multiply, divide, power                                                               </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-2-1"  
+class="td11">               <span 
+class="ectt-1440">exp(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-2-2"  
+class="td11"> <img 
+src="images/index_en13x.png" alt="ex "  class="math" >                                                                                   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-3-1"  
+class="td11">              <span 
+class="ectt-1440">sqrt(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-3-2"  
+class="td11"> <img 
+src="images/index_en14x.png" alt="&#x221A;x-- "  class="math" >                                                               </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-4-1"  
+class="td11">               <span 
+class="ectt-1440">log(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-4-2"  
+class="td11"> <span 
+class="ecrm-1200">natural logarithm of x                                                                                                                </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-5-1"  
+class="td11">             <span 
+class="ectt-1440">log10(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-5-2"  
+class="td11"> <span 
+class="ecrm-1200">common (base 10) logarithm of x                                                                                                  </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-6-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-6-1"  
+class="td11">               <span 
+class="ectt-1440">sin(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-6-2"  
+class="td11"> <span 
+class="ecrm-1200">sine of x                                                                                                                                  </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-7-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-7-1"  
+class="td11">               <span 
+class="ectt-1440">cos(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-7-2"  
+class="td11"> <span 
+class="ecrm-1200">cosine of x                                                                                                                               </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-8-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-8-1"  
+class="td11">               <span 
+class="ectt-1440">tan(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-8-2"  
+class="td11"> <span 
+class="ecrm-1200">tangent of x                                                                                                                             </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-9-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-9-1"  
+class="td11">              <span 
+class="ectt-1440">asin(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-9-2"  
+class="td11"> <span 
+class="ecrm-1200">arc sine of x                                                                                                                             </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-10-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-10-1"  
+class="td11">              <span 
+class="ectt-1440">acos(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-10-2"  
+class="td11"> <span 
+class="ecrm-1200">arc cosine of x                                                                                                                          </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-11-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-11-1"  
+class="td11">              <span 
+class="ectt-1440">atan(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-11-2"  
+class="td11"> <span 
+class="ecrm-1200">arc tangent of x                                                                                                                        </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-12-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-12-1"  
+class="td11">              <span 
+class="ectt-1440">sinh(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-12-2"  
+class="td11"> <span 
+class="ecrm-1200">hyperbolic sine of x                                                                                                                    </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-13-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-13-1"  
+class="td11">              <span 
+class="ectt-1440">cosh(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-13-2"  
+class="td11"> <span 
+class="ecrm-1200">hyperbolic cosine of x                                                                                                                 </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-14-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-14-1"  
+class="td11">              <span 
+class="ectt-1440">tanh(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-14-2"  
+class="td11"> <span 
+class="ecrm-1200">hyperbolic tangent of x                                                                                                               </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-15-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-15-1"  
+class="td11">            <span 
+class="ectt-1440">sinint(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-15-2"  
+class="td11"> <span 
+class="ecrm-1200">sine integral of x </span><center class="math-display" ><img 
+src="images/index_en15x.png" alt="&#x222B;x sin t
+   ----dt
+ 0  t " class="math-display" ></center> </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-16-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-16-1"  
+class="td11">            <span 
+class="ectt-1440">cosint(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-16-2"  
+class="td11"> <span 
+class="ecrm-1200">cosine integral of x </span><center class="math-display" ><img 
+src="images/index_en16x.png" alt="  &#x222B;
+    &#x221E; cost-
+-      t  dt
+   x " class="math-display" ></center> </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-17-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-17-1"  
+class="td11">              <span 
+class="ectt-1440">sign(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-17-2"  
+class="td11"> <span 
+class="ecrm-1200">sign of x </span><center class="math-display" ><img 
+src="images/index_en17x.png" alt="(
+|{ - 1 if x &#x003C; 0
+    0 if x = 0
+|(
+    1 if x &#x003E; 0 " class="math-display" ></center> </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-18-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-18-1"  
+class="td11">               <span 
+class="ectt-1440">abs(x) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-18-2"  
+class="td11"> <img 
+src="images/index_en18x.png" alt="|x|  "  class="math" >                                                                                                                                   </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-19-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-19-1"  
+class="td11"> <span 
+class="ectt-1440">iif(x,expr1,expr2) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-19-2"  
+class="td11"> <span 
+class="ecrm-1200">immediate if </span><center class="math-display" ><img 
+src="images/index_en19x.png" alt="{
+  expr1  if x &#x003C; 0
+  expr2  if x &#x2265; 0 " class="math-display" ></center> </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-20-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-20-1"  
+class="td11">             <span 
+class="ectt-1440">sat(x,y) </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-20-2"  
+class="td11"> <span 
+class="ecrm-1200">satellite function of x and y </span><center class="math-display" ><img 
+src="images/index_en20x.png" alt="(
+|{   1 if x &#x003E; |y |
+    0 if -  |y| &#x2264; x &#x2264; |y|
+|(
+  - 1 if x &#x003C; - |y |  " class="math-display" ></center> </td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-21-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-21-1"  
+class="td11">                     <span 
+class="ectt-1440">i </span></td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-21-2"  
+class="td11"> <span 
+class="ecrm-1200">1 (one)                                                                                                                                    </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-22-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-22-1"  
+class="td11">                       </td><td  style="white-space:nowrap; text-align:left;" id="TBL-1-22-2"  
+class="td11"> <span 
+class="ecrm-1200">0 (empty field means zero)                                                                                                          </span></td>
+</tr><tr 
+class="hline"><td><hr></td><td><hr></td></tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-23-"><td  style="white-space:nowrap; text-align:right;" id="TBL-1-23-1"  
+class="td11">                       </td> </tr></table>
+</div>
+<!--l. 186--><p class="indent" >   <span 
+class="ecrm-1200">Examples: </span><span 
+class="ectt-1200">2*sin(t-1)+cos(t)-x^2</span><span 
+class="ecrm-1200">, </span><span 
+class="ectt-1200">sqrt(abs(x))</span><span 
+class="ecrm-1200">, </span><span 
+class="ectt-1200">iif(t,sin(x),cos(x))</span>
+<span 
+class="ecrm-1200">etc.</span>
+                                                                          
+
+                                                                          
+                                                                          
+
+                                                                          
+   <!--l. 190--><div class="crosslinks"><p class="noindent"><span 
+class="ecrm-1200">[</span><a 
+href="index_ense2.html" ><span 
+class="ecrm-1200">next</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_ense1.html" ><span 
+class="ecrm-1200">front</span></a><span 
+class="ecrm-1200">] [</span><a 
+href="index_en.html#index_ense1.html" ><span 
+class="ecrm-1200">up</span></a><span 
+class="ecrm-1200">] </span></p></div>
+<!--l. 190--><p class="indent" >   <a 
+ id="tailindex_ense1.html"></a>   
+</body></html> 
